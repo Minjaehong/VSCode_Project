@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장 함수 이해</title>
+    <script>
+        // 인코딩, 디코딩함수
+        var encoderStr = '자바스크립트';
+        document.write(encodeURIComponent(encoderStr));
+        document.write('<br>');
+        var decodeStr = encodeURIComponent(encoderStr);
+        document.write(decodeURIComponent(decodeStr));
+        document.write('<br>');
+
+        // 숫자, 유한/무한 값 판별 함수
+        var num1 = '숫자';
+        if(isNaN(num1)){
+            document.write('숫자아님');
+        } else{
+            document.write('숫자');
+        }
+        document.write('<br>');
+
+        var num2 = 1 / 0;
+        if(isFinite(num2)){
+            document.write('유한값 입니다!');
+        }else{
+            document.write('무한값 입니다!');
+        }
+        document.write('<br>');
+
+        // 숫자, 문자 변환 함수
+        var num3 = '10';
+        document.write(Number(num3)+ '<br>');
+        document.write(typeof num3 + '<br>');
+        document.write(typeof Number(num3) + '<br>');
+        document.write('숫자 number 타입으로 변환된 ' + Number(num3) + '<br>');
+        
+        var num4 = '100px';
+        document.write(parseInt(num4) + '<br>');
+
+        var num5 = '33.3%';
+        document.write(parseFloat(num5) + '<br>');
+
+        var num6 = 10;
+        document.write(typeof num6 + '<br>');
+        document.write(typeof String(num6) + '<br>');
+
+        // 자바스크립트 코드 변경 함수 eval()
+        var str1 = 'var num7 = 10';
+        var str2 = 'var num8 = 20';
+        eval(str1);
+        eval(str2);
+        document.write('합계값 = ' + (num7 + num8) + '<br>');
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

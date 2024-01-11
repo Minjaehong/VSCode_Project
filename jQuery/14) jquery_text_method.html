@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_text_metho.html 소스 코딩</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // id값이 m1인 요소 노드의 텍스트 노드값을 표시합니다.
+            console.log($("#m1").text());
+            $("#m1").text("responsive web");
+            $("#m2 > div").text(function(index,text){
+                return "div 요소의 텍스트는 " + text + ", index는 " + index + "입니다!";
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">jQuery</div>
+    <div id="m2">
+        <div>html</div>
+        <div>css</div>
+        <div>javascript</div>
+    </div>
+</body>
+</html>

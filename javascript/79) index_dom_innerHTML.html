@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_dom_innerHTML.html</title>
+    <script>
+        function change() {
+            var p = document.getElementById('firstP');
+            console.log(p);
+            p.innerHTML = "<img src='./images/flower.jpg'>"
+        }
+    </script>
+</head>
+<body>
+    <h3>innerHTML 활용 : 아래 글자를 클릭하면 예쁜 꽃 이미지가 보입니다.</h3>   
+    <hr>
+    <p id="firstP" style="color: blue;" onclick="change()">
+        <span style="color: red;">여기를</span>
+        클릭하세요!
+    </p>
+</body>
+</html>

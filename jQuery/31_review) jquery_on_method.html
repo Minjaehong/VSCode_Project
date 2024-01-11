@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_on_method.html</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        *{margin: 0;}
+        .on{background: #f60; color:#fff}
+    </style>
+    <script>
+        $(document).ready(function(){
+            // m1 id 안에 있는 button 태그를 클릭하면 alert() 함수를 실행해줍니다
+            $("#m1 button").on("click", function(){
+                alert('이벤트 연결1');
+            });
+            // m2 id 안에 있는 2개이 button 태그들에게 각각 button 태그를 클릭하면 alert() 함수를 실행해줍니다 
+            $("#m2").on("click", "button", function(){
+                alert("이벤트 연결2");
+            });
+            $("#m3 button").on({
+                mouseenter: function(){
+                    $(this).toggleClass("on");
+                }, mouseleave : function(){
+                    $(this).toggleClass("on");
+                }
+            });
+            function showEvent(){
+                alert("이벤트 연결3");
+            }
+            $("#m4 button").on("click",showEvent);
+
+            $("#m5 button").on("click", function(){
+                alert("이벤트 제거");
+            }).off();
+
+            $("#m6 button").one("click",function(){
+                alert("이벤트 한번만 연결");
+            });
+
+            // id가 m7인 영역을 클릭하면
+            $("#m7").on("click",function(){
+                // p태그의 객체 자신(this)에게 css() 메서드로
+                // backgroudn 속성 표현값을 #f00(red) 적용해 줍니다.
+                $("p", this).css("background","#ff0000");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <button>클릭1</button>
+    </div>
+    <div id="m2">
+        <button>클릭2_1</button>
+        <button>클릭2_2</button>
+    </div>
+    <div id="m3">
+        <button>클릭3</button>
+    </div>
+    <div id="m4">
+        <button>클릭4</button>
+    </div>
+    <div id="m5">
+        <button>클릭5</button>
+    </div>
+    <div id="m6">
+        <button>클릭6</button>
+    </div>
+    <div id="m7">
+        <p>클릭7</p>
+    </div>
+</body>
+</html>

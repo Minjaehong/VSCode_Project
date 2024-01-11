@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_flex_box.html 소스 코딩</title>
+    <style>
+        ul{padding: 0; margin: 0;}
+        li{list-style-type: none;}
+        h1{
+            padding: 10px 20px;
+            background: darkblue;
+            color: #fff;
+            font-size: 20px;}
+        .gnb{
+            display: flex;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            /* flex-direction: column-reverse; 순서가 바뀐 세로형*/
+            /* 세로형 : column */
+            flex-direction: column; 
+            -webkit-flex-direction:column;
+            -ms-flex-direction:column;
+
+        }    
+        .gnb > li{
+            flex: 1;
+            -webkit-flex:1;
+            -ms-flex:1;
+            margin: 2px;
+        }
+        .gnb li a{
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            background: lightblue;
+            color: darkblue;
+        }
+        /* 미디어쿼리로 테블릿의 경우의 CSS 코딩을 합니다 */
+        @media all and (min-width:768px) {
+            .gnb{
+                flex-direction: row-reverse;
+                /* -webkit-flex-direction: row; */
+                /* -webkit-flex-direction: row-reverse; */
+                -ms-flex-direction: row;
+                justify-content: flex-end;
+                /* justify-content: space-around; */
+                /* -webkit-justify-content: space-around; */
+                background: lightblue;
+                
+            }
+            .gnb > li{
+                flex: 0 0 80px;
+                -webkit-flex: 0 0 80px;
+                -ms-flex: 0 0 80px;
+                margin: 10px;
+            }
+            .gnb li a{padding: 0;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex Box 활용 예시</h1>
+    <ul class="gnb">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Custommer</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 이벤트 모델과 onload 활용 이벤트 처리</title>
+    <script>
+        // 기본 이벤트 모델에서 객체에 동일한 이벤틑 한번만 적용됩니다. 즉, 아래 window.onload 적용 btLoad는 동일한 이벤트 실행 시, 처리가 안되고, 아래 두번째 window.onload 적용 btView만 실행이 됩니다.
+        window.onload = function(){
+            var btLoad = document.getElementById('btLoad'); // 요소(태그) 취득 명령어
+            btLoad.onclick = function(){
+                console.log('btLoad ok');
+            };
+
+            var btView = document.getElementById('btView');
+            function view(){
+                console.log('btView ok!');
+            }
+            btView.onclick = view;
+        };
+    </script>
+</head>
+<body>
+    <!-- 취득할 요소(태그) -->
+    <button id="bt">클릭</button>
+    <script>
+        // HTML 요소(태그)를 취득할 때는 순서상 '취득할 요소(태그)'가 '요소(태그) 취득 명령어' 이전에 있어야 합니다.
+        var bt = document.getElementById('bt'); // 요소(태그) 취득 명령어
+        bt.onclick = function(){
+            console.log('ok');
+        };
+        
+
+        
+        window.onload = function(){
+            var btView = document.getElementById('btView');
+            function view(){
+                console.log('btView ok!');
+            }
+            btView.onclick = view;  // (1)
+            // btView.onclick = view(); //(2)
+            // 위에 기본 이벤트 모델로 다른 함수를 호출하는 (1) 구문에서는 함수 view에 ()를 붙이지 않았습니다.
+            // 그런데, 아래 (2) 구문에서는 view에 ()를 붙여 주었는데, 그렇게 하면 웹페이지가 실행될 때, 버튼요소를 클릭하지 않아도 이벤트가 한번 강제로 실행되게 할 수 있습니다. 이것을 '이벤트 강제 실행'이라고 합니다.
+        }
+    </script>
+    <hr>
+    <!-- 그런데, '취득할 요소(태그)'가 '요소(태그) 취득 명령어' 이후에 온다면 이때는, 반드시 load 이벤트를 적용해 주어야 합니다. -->
+    <!-- 취득할 요소(태그) -->
+    <button id="btLoad">클릭</button>
+    <hr>
+    <button id="btView">클릭</button>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 범위</title>
+    <script>
+        // 함수의 전역변수
+        var sum1 = 10;
+        document.write('전역 변수값 = ' + sum1);
+        document.write('<br>')
+        function add1() {
+            sum1 = 20;
+        }
+        add1();
+        document.write('전역 변수값 = ' + sum1);
+        document.write('<br>')
+
+        // 함수의 지역변수
+        var sum2 = 30;
+        function add2() {
+           var sum2 = 40; 
+           document.write('지역 변수값 = ' + sum2);
+            document.write('<br>')
+        }
+        add2();
+        document.write('전역 변수값 = ' + sum2)
+        document.write('<br>')
+
+
+        // 블록의 지역 변수
+        var num1 = 50;
+        if(num1 === 50){
+            num1 = 60;
+        }
+        document.write('전역 변수값 = ' + num1);
+        document.write('<br>')
+
+        let num2 = 70;
+        if(num2 === 70){
+            let num2 = 80;
+            document.write('지역 변수값 = ' + num2);
+            document.write('<br>')
+        }
+        document.write('전역 변수값 = ' + num2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

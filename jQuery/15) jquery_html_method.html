@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_html_method.html 소스 코딩</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log($("#m1").html());
+            $("#m1").html("<em>html</em>");
+            $("#m2 > div").html(function(){
+                return "<strong>" + $(this).text() + "</strong>";
+            });
+        })
+    </script>
+</head>
+<body>
+    <!-- (div#m1>strong{jQuery})+(div#m2>(div>em{html})+(div>em{css})+(div>em{javascript})) -->
+    <div id="m1">
+        <strong>jQuery</strong>
+    </div>
+    <div id="m2">
+        <div><em>html</em></div>
+        <div><em>css</em></div>
+        <div><em>javascript</em></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 활용 Grid System 이해</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>        
+        .myBoard{border: 1px solid red;}
+    </style>
+</head>
+<body>
+    <!-- https://getbootstrap.com/docs/3.3/css/#grid -->
+    <!-- Bootstrap은 콘텐츠를 감싸는 wrapping 요소(container)를 포함해야 합니다.
+    container는 그리드 시스템의 필수 요소입니다. container에는 2가지 종류가 있습니다.
+    .container class : fixed width container로서 responsive fixed layout(반응형 고정폭 레이아웃)을 제공합니다.
+    .container-fluid class : full width container로서 fluid layout(유동 최대폭 레이아웃)을 제공합니다.
+    2가지 container를 중첩(같이) 사용하면 안됩니다. padding에 문제가 발생할 수 있습니다. -->
+    <!-- 아래의 container 를 container-fluid로 변경해서 확인해 봅니다. -->
+    <div class="container">
+        <!-- <div class="container-fluid"> -->
+        <!-- .container와 .container-fluid는 콘텐츠 요소를 포함하는 부모 요소로서 container 또는 wrapping 요소라고 부르며,  container는 그리드 시스템을 위한 필수 사항입니다. 그리드 시스템은 열을 나누어 콘텐츠를 원하는 위치에 배치하는 방법(Layout)을 말합니다. Bootstrap은 반응형 12열 그리드 시스템을 제공합니다. -->
+        <div class="row">
+            <!-- div>lorem4 -->
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-1">Lorem ipsum dolor sit.</div>
+        </div>    
+        <br>
+        <div class="row">
+            <div class="myBoard col-md-4">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-4">Lorem ipsum dolor sit.</div>
+            <div class="myBoard col-md-4">Lorem ipsum dolor sit.</div>
+        </div>
+        <br>
+        <div class="row">
+            <!-- 아래의 col-md-offset-4를 col-md-offset-0, col-md-offset-1로 변경해서 확인해 봅니다. -->
+            <!-- <div class="myBorder col-md-4 col-md-offset-1">Lorem, ipsum dolor sit</div>  -->
+            <!-- <div class="myBorder col-md-4 col-md-offset-8">Lorem, ipsum dolor sit</div>  -->
+            <div class="myBoard col-md-4 col-md-offset-4">Lorem ipsum dolor sit.</div>
+        </div>
+
+    </div> <!-- end .container -->
+    
+</body>
+</html>

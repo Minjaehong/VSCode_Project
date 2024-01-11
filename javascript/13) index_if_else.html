@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_if_else.html 소스 코딩</title>
+    <script>
+        var age = prompt('나이를 입력해 주세요!','');
+        console.log(typeof age); // string
+        console.log(typeof Number(age)); // number
+        var admissionFee='';
+        if(age>13||age>=65){
+            admissionFee ='2,000원';
+        }else if(age>=13 && age < 20){
+            admissionFee ='4,000원';
+        }else{
+            admissionFee = '6,000원'
+        }
+        document.write(admissionFee);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

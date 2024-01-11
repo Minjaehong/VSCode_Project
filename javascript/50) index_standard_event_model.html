@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표준 이벤트 모델 적용</title>
+    <script>
+        // 표준 이벤트 모델은 객체.addEventListener('이벤트',함수)의 방식으로 이벤트를 연결 처리합니다.
+        window.onload = function(){
+        var btEvent = document.getElementById('btEvent');
+        function view() {
+                console.log('btEvent ok!');
+            }
+            // 아래 'click' 이벤트는 'on'을 붙이지 않습니다.
+            btEvent.addEventListener('click',view);  
+        };
+    </script>
+</head>
+<body>
+    <button id="btEvent">클릭</button>    
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery attribute selector 활용</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".list1 > li[class='list_1']").css('border','2px solid red');
+            $(".list1 > li[class!='list_1']").css('border','2px solid orange');
+            $(".list2 > li[class~='list']").css('background','yellow');
+            $(".list2 > li[class*='list']").css('border','2px solid green');
+            $(".list3 > li[class|='list']").css('border','2px solid blue');
+            $(".list4 > li[class^='list']").css('border','2px solid navy');
+            // class list4 안에 있는 li 태그의 속성 class명 중에서 bg로 끝나는 요소를 선택해서 css() 메서드로 background 속성의 purple값을 적용해줍니다.
+            $(".list4 > li[class$='bg']").css('background','purple');
+        })
+    </script>
+</head>
+<body>
+    <ul class="list1">
+        <li class="list_1">내용1_1</li>
+        <li class="list_2">내용2_2</li>
+        <li class="list_3">내용3_3</li>
+    </ul>
+    <ul class="list2">
+        <li class="list bg">내용2_1</li>
+        <li class="list_1">내용2_2</li>
+        <li class="list_2">내용2_3</li>
+    </ul>
+    <ul class="list3">
+        <li class="list">내용3_1</li>
+        <li class="list-1">내용3_2</li>
+        <li class="list-bg">내용3_3</li>
+    </ul>
+    <ul class="list4">
+        <li class="list">내용4_1</li>
+        <li class="list-1">내용4_2</li>
+        <li class="list-bg">내용4_3</li>
+    </ul>
+</body>
+</html>

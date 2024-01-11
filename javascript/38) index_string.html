@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_string.html 소스 코딩</title>
+    <script>
+        // length
+        var str = 'Javascript';
+        console.log(str.length); // 10
+
+        // charAt()
+        console.log(str.charAt(0));
+        console.log(str.charAt(4));
+
+        var id = '901212-2345213';
+        if(id.charAt(7) == 2){
+            console.log('여성입니다.')
+        }else if(id.charAt(7) == 1){
+            console.log('남성입니다.');
+        }
+
+        //indexOf() : 왼쪽부터 인덱싱 시작 처리함!
+        var str = 'Javascript';
+        console.log(str.indexOf('a')); // 1 왼쪽에서 읽어서 처음으로 나오는 위치
+        console.log(str.indexOf('k')); // -1(값이 없을 때는 -1)
+
+        if(str.indexOf('v') == 2){
+            console.log('해당 문자는 존재합니다!')
+        }else {
+            console.log('해당 문자는 존재하지 않습니다!')
+        }
+
+        // lastIndexOf() : 오른쪽부터 인덱싱 시작 처리함!
+        console.log(str.lastIndexOf('a'));
+
+        // includes()
+        console.log(str.includes('script'));
+
+        //substring()
+        var str = 'http://www.kbs.co.kr';
+        console.log(str.substring(0,4)); // 여기서는 0부터 4미만까지의 문자를 추출해서 표현합니다.
+        console.log(str.substring(7)); // 여기서는 7번 인덱스부터 끝까지의 문자를 추출해서 표현합니다.
+
+        //substr()
+        console.log(str.substr(7,4)); // 여기서는 7번 인덱스부터 4개 문자를 추출해서 표현합니다.
+
+        // split()
+        var str = 'Javascript_jQuery'; 
+        var division = str.split('_'); // split() 함수로 매개변수 인수값으로 문자열을 구분하되, 배열에 저장 처리합니다.
+        console.log(division[0] + ' , ' + division[1]);
+
+        // replace()
+        var str = 'm_out.gif';
+        // 아래 예문에서는 out 문자를 over문자로 replace(대체) 처리합니다.
+        console.log(str.replace('out','over'));
+
+        // concat() 함수는 해당 문자열을 연결 처리합니다.
+        var str1 = 'nav';
+        var str2 = '_bg';
+        console.log(str1.concat(str2));
+
+        // trim() : 공백 없애기
+        var str = ' removeblank';
+        console.log(str);
+        console.log(str.trim());
+
+        // toLowerCase(), toUpperCase()
+        var str = 'LowerCase_UpperCase';
+        console.log(str.toLowerCase());
+        console.log(str.toUpperCase());
+
+
+ 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

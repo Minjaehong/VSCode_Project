@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_parameter.html 소스 코딩</title>
+    <script>
+        // 선언적 함수 형식 처리
+        // function getAvg(s1,s2) {
+        //     var avg = (s1+s2)/2;
+        //     return avg;
+        // }
+        // console.log(getAvg(90,80));
+
+        // 익명 함수 형식 처리
+        // var getAvg = function(s1,s2) {
+        //     var avg = (s1+s2)/2;
+        //     return avg;            
+        // }
+        // console.log(getAvg(90,80));
+
+        // 익명 함수 : 즉시 실행 함수 형식 처리
+        (function(s1,s2) {
+            var avg = (s1+s2)/2
+            console.log(avg);
+        })(90,80);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

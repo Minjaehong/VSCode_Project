@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_flex_box_semantic_mediaquery.html 소스 코딩</title>
+    <style>
+        /* 시멘틱 태그 반응형 레이아웃 Flexbox 구현 예시
+        전체 화면에서 폭을 모바일 화면 크기로 줄이면,
+        미디어 쿼리 CSS 표현이 반응형 웹으로 표현됩니다. */
+        .container{
+            width: 1200px;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            /* Flexbox 너비가 컨텐츠보다 작아졌을 때 줄바꿈 표현을 하게함 */
+            flex-wrap: wrap;
+        }
+        header{
+            background-color: tomato;
+            /* header 영역에 대해 1(100%) 전체 너비가 적용되게 함 */
+            flex: 1;
+            padding: 1em;
+        }
+        section{
+            /* 자식 요소 article 가로 배치 표현하기 위한 flex 적용 */
+            display: flex;
+        }
+        section article{
+            padding: 1.5em 1em;
+        }
+        article.main{
+            background-color: gray;
+            /* article 태그 전체의 4/6 너비를 가지게 함 */
+            flex : 4;
+            order: 1;
+        }
+        article.left{
+            background-color: yellow;
+            /* article 태그 전체의 1/6 너비를 가지게 함 */
+            flex : 1 ;
+            order: 2;
+        }
+        article.right{
+            background-color: green;
+            /* article 태그 전체의 1/6 너비를 가지게 함 */
+            flex : 1 ;
+            order: 3 ;
+        }
+        footer{
+            background-color: aqua;
+            /* footer 영역에 대해 1(100%) 전체 너비 적용함 */
+            flex : 1;
+            padding: 1em;
+        }
+        /* 모바일 화면에서 실행할 미디어쿼리 CSS 적용함 */
+        @media (max-width: 768px) {
+            .container{width:100%;}
+            section{
+                /* 반응형 웹 flex 표현은 세로형 방향으로 표현함 */
+                flex-direction: column;
+            }
+            article.main{
+                /* 반응형 웹 표현시 article 태그 자식 요소 중에서 첫번재 순서로 적용함 */
+                order:4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <section>
+            <article class="main">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi harum nostrum expedita aspernatur distinctio perferendis consequatur ipsam, voluptatem ipsa praesentium ab adipisci obcaecati veniam voluptate minus et asperiores iusto rerum.
+                </p>
+            </article>
+            <article class="left">Aside1</article>
+            <article class="right">Aside2</article>
+        </section>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

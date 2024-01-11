@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout,clearTimeout,location reload 활용</title>
+    <style>
+        div{background: yellowgreen; width: 100px; height: 100px; text-align: center; line-height: 100px;}
+    </style>
+    <script>
+        window.onload = function(){
+            var stopBt = document.getElementById('stopBt');
+            var increase = setTimeout(function(){
+                alert('increase 3초 후에 실행!')
+            },2000);
+            stopBt.onclick = function(){
+                clearTimeout(increase);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="stopBt">멈춤</div>
+    <!--  location 객체의 reload() 메서드는 현재 페이지를 다시 로드합니다. 즉 "F5 새로고침"과 비슷한 역할을 합니다.-->
+    <button onclick="javascript:location.reload()">reload 새로고침 실행</button>
+</body> 
+</html>

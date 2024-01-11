@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_regexp_multiple.html 소스 코딩</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>정규식 속성 활용</legend>
+            <p>
+                <label for="tel">휴대폰 번호</label>
+                <input type="text" id="tel" pattern="\d{3}-\d{3,4}-\d{4}" required="required" title="휴대폰 번호는 숫자 3자리 - 숫자 3자리에서 4자리 - 숫자 4자리를 입력해 주세요!">
+            </p>
+            <p><input type="submit" value="확인"></p>
+        </fieldset>
+        <fieldset>
+            <legend>다중 파일 선택</legend>
+            <p>
+                <label for="email">이메일</label>
+                <input type="email" id="email" multiple="multiple" title="이메일 입력">
+                <label for="file">파일찾기</label>
+                <input type="file" multiple="multiple">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

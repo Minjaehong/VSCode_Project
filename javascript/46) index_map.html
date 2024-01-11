@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map 객체 이해</title>
+    <script>
+        var sub = new Map();
+        sub.set('html',1);
+        sub.set('css',2);
+        sub.set('javascript',3);
+        document.write(sub.size + '<br>'); // 3
+        // 키(key)가 문자열 css인 데이터 값(value)을 반환해 줍니다.
+        document.write(sub.get('css') + '<br>'); // 2
+        // 키(key)가 문자열 html인 데이터의 has(존재여부)를 반환해 줍니다.
+        document.write(sub.has('html') + '<br>'); // 2
+
+        // sub 변수에 저장되어 있는 모든 키(key) 정보를 for문을 사용하여 반복해서 읽어옵니다.
+        for (const key of sub.keys()){
+            document.write(key + ' '); // html css javascript
+        }
+        document.write('<br>');
+
+        // sub 변수에 저장되어 있는 모든 값(value) 정보를 for문을 사용하여 반복해서 읽어옵니다.
+        for (const value of sub.values()){
+            document.write(value + ' '); // 1 2 3
+        }
+        document.write('<br>');
+
+        // sub 변수에 저장되어 있는 키(key)와 값(value)들의 배열정보를 가져옵니다.
+        for(const key of sub.entries()){
+            document.write(key);
+        }
+        document.write('<br>');
+        sub.delete('html'); // 'html' 키를 삭제 처리합니다.
+        document.write(sub.has('html') + '<br>'); // false
+        sub.clear(); // 모든 요소를 삭제 처리합니다.
+        document.write(sub.size);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

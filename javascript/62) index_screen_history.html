@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screen 객체와 history 객체 활용</title>
+    <script>
+        // screen 객체는 모니터 화면정보 관련 객체입니다.
+        var w = screen.width;
+        var h = screen.height;
+        document.write('해상도 가로 크기 = '+ w + ' 세로 크기 = ' + h);
+    </script>
+</head>
+<body>
+    <hr>
+    <!-- history 객체는 페이지가 이동한 정보를 관리하는 객체입니다. -->
+    <a href="./history_first.html">첫번째 웹페이지로 Go!</a> <br><br>
+    <button onclick="history.forward();">앞으로 가기!</button><br><br>
+    <button onclick="history.go(1)">한단계 앞으로 웹페이지 가기!</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체 메서드</title>
+    <script>
+        window.onload = function(){
+            var kbs = document.getElementById('kbs');
+            kbs.onclick = function(event){
+                alert('KBS 한국방송공사')
+                // (첫번째 방법) a 태그의 '기본 이벤트'를 발생시키기 않도록 preventDefault() 메서드를 사용합니다.
+                // event.preventDefault(); // 주로 많이 사용
+
+                // (두번째 방법) a 태그의 '기본 이벤트'를 발생시키기 않도록 return flase를 사용할 수도 있습니다.
+                // return false;
+            };
+            
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <a href="http://www.kbs.co.kr" target="_blank" id="kbs">
+            KBS 한국방송공사
+        </a>
+    </div>
+</body>
+</html>

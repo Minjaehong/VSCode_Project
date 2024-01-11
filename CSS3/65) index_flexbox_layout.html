@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_flexbox_layout.html 소스 코딩</title>
+    <style>
+        /* vh = viewport height */
+        body{margin: 0; height: 100vh;}
+        h1,h2,h3,h4,h5,h6{margin: 0;}
+        header{display: flex;}
+        .logo, .search, .gnb{padding: 1em;}
+        .logo{
+            background-color: greenyellow;
+            /* div.logo 영역에 대해 1(100%) 전체 너비를 적용함 */
+            flex: 1;
+        }
+        .search{
+            background-color: pink;
+            /* div.search 영역에 대해 10(100%) 전체 너비를 적용함 */
+            flex : 10;
+        }
+        .gnb{
+            background-color: dodgerblue;
+            /* div.gnb 영역에 대해 1(100%) 전체 너비를 적용함 */
+            flex: 1;
+        }
+        @media (max-width:768px) {
+            header{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">logo</div>
+        <div class="search"><input type="text"><button>검색</button></div>
+        <div class="gnb">gnb</div>
+    </header>
+</body>
+</html>

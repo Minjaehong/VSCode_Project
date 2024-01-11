@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_word_wrap_break.html 소스코딩</title>
+    <style>
+        ul{width: 200px; border: 1px solid #000;}
+        .wrapping li{word-wrap: break-word;}
+        p{
+            width: 200px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        .breaking1{word-break: normal;} /* 기본값 */
+        .breaking2{word-break: break-all;} /* 글자가 넘치면 줄바꿈 */
+        .breaking3{word-break: keep-all; word-wrap: break-word;} /* 단어를 끊어 줄바꿈하지 않음, 여기에 word-wrap:  break-word 적용하면 컨텐츠 안으로 다 넣을 수 있음 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div>이름 : 홍길동</div>
+        </li>
+        <li>
+            <div>이메일 : hongkildongkoreanactor@naver.com</div>
+        </li>
+    </ul>
+    <ul class="wrapping">
+        <li>
+            <div>이름 : 홍길동</div>
+        </li>
+        <li>
+            <div>이메일 : hongkildongkoreanactor@naver.com</div>
+        </li>
+    </ul>
+    <br>
+    <p class="breaking1">
+        홍길동 <br>
+        한국사회역사연구회 고고학과 전임교수 <br>
+        notonlystaringgoo@naver.com
+    </p>
+    <p class="breaking2">
+        홍길동 <br>
+        한국사회역사연구회 고고학과 전임교수 <br>
+        notonlystaringgoo@naver.com
+    </p>
+    <p class="breaking3">
+        홍길동 <br>
+        한국사회역사연구회 고고학과 전임교수 <br>
+        notonlystaringgoo@naver.com
+    </p>
+</body>
+</html>

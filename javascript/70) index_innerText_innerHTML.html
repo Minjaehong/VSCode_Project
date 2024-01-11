@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_innerText_inner_HTML.html 소스 코딩</title>
+</head>
+<body>
+    <p id="inner">
+        힘내세요!
+        <span>화이팅입니다!</span>
+    </p>
+    <script>
+        // innerText는 element 내부에 있는 text값들을 말합니다!
+        console.log(document.getElementById('inner').innerText); // 힘내세요! 화이팅입니다!
+    </script>
+    <script>
+        // innerHTML은 element 내부에 있는 HTML이다 XML 모두를 말합니다!
+        console.log(document.getElementById('inner').innerHTML); // 힘내세요! <span>화이팅입니다!</span>
+    </script>
+</body>
+</html>

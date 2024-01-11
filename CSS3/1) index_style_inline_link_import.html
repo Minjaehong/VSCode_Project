@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_style_inline_link_import.html 소스코딩</title>
+    <!-- CSS 적용 첫번째 방법: 내부 스타일시트 활용 -->
+    <style>
+        p{ color:red;}
+    </style>
+    <!-- CSS 적용 두번째 방법: 외부 스타일시트 활용(확장자 css파일 사용) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS 적용 세번째 방법: 외부 스타일시트 활용(확장자 css파일 사용, @import는 css 안으로 다른 css 파일을 불러들일 경우 사용함, 이때, css의 맨 윗줄에 경로를 기술함) -->
+    <style type="text/css">
+        @import url("common.css");
+    </style>
+
+</head>
+<body>
+    <p class="first">우리를 기쁘게 하는 것들!</p>
+    <p class="second">오늘은 즐거운 금요일</p>
+    <p class="third">내일은 즐거운 토요일!</p>
+    <!-- CSS 적용 네번째 방법: 내부 인라인 스타일 속성 활용(태그에서 style 속성을 사용함) -->
+    <p class="fourth" style="color:brown">이제 주말이다!</p>
+</body>
+</html>

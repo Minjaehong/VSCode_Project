@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_each_method.html 소스 코딩</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        // $.each() 문의 배열 데이터 처리
+        var city =['서울','인천','대구','대전','부산'];
+        $.each(city,function(index,value){
+            // console.log(index);
+            // console.log(value);
+            console.log(index + " : " + value);
+        });
+
+        // $.each() 문의 객체 데이터 처리
+        var subjectInfo = {
+            subject: 'html',
+            grade : 1,
+            days : 20
+        };
+        $.each(subjectInfo,function(key,value){
+            // console.log(key);
+            // console.log(value);
+            console.log(key + " : " + value);
+        });
+
+        // $(선택자).each() 메서드 형식 활용도 가능함
+        $(document).ready(function(){
+            $("div").each(function(index,element){
+                console.log(index);
+                console.log(element);
+                console.log($(this).attr('class'));
+            });
+        })
+
+        
+    </script>
+</head>
+<body>
+    <!-- div.m${내용$}*3 -->
+    <div class="m1">내용1</div>
+    <div class="m2">내용2</div>
+    <div class="m3">내용3</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearTimeout 메서드 활용</title>
+    <script>
+        window.onload = function(){
+            var bt = document.getElementById('bt');
+            var increase = setTimeout(function(){
+                alert('increase실행');
+            },2000);
+            bt.onclick = function(){
+                clearTimeout(increase);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="bt">멈춤</button>
+    <!-- location 객체의 reload() 메서드는 현재 페이지를 다시 로드합니다. 즉, F5 새로고침과 비슷한 역할을 합니다 -->
+    <button onclick="javascript:location.reload()">reload 실행!</button>
+    <!-- location 객체의 replace() 매서드는 매개변수의 url 값으로 이동처리합니다. -->
+    <button onclick="javascript:location.replace('http://www.imbc.co.kr')">replace 실행!</button>
+
+</body>
+</html>

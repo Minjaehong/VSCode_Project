@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_arrow_function.html 소스 코딩</title>
+    <script>
+        const doAddition1 = function(s1,s2){
+            return s1 + s2;
+        }
+        document.write('일반 함수 처리 합계값 = ' + doAddition1(10,11));
+
+        document.write('<br>');
+
+        const doAddition2 = (s1,s2) => s1 + s2;
+        document.write("화살표 함수 처리 합계값 = " + doAddition2(10,11));
+
+        document.write('<br>');
+
+        const doAddition3 = (s1,s2) => {
+            var result = (s1+s2) / 2;
+            return result;
+        }
+        document.write('화살표 함수 처리 평균값 = ' + doAddition3(10,4));
+
+        document.write('<br>');
+
+        const doAddition4 = (s1,s2) => (s1+s2) / 2;
+        document.write('화살표 함수 처리 평균값 = ' + doAddition4(14,4));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

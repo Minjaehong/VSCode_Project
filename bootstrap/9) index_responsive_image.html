@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostrap 활용 이미지 처리</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        /* 다음은 이미지 크기를 반응형 웹 적용 시 늘려주는 CSS 소스 코드 입니다.
+            : 부트스트랩 .img-responsive 적용해 주면 반응형 웹 이미지로 적용됨 */
+        /* .img-responsive{
+            width: 100%; height: 100%;
+            position: fixed;
+        } */
+        /* 위와 비슷하게 반응형 웹 적용 시 이미지 크기를 늘려주는 CSS 소스 코드 입니다.
+            : 부트스트랩 .img-responsive 적용해 주면 반응형 웹 이미지로 적용됨 */
+        /* .img-responsive{
+            width: 100%;
+            height: 100vh;
+        } */
+    </style>
+</head>
+<body>
+    <!-- https://getbootstrap.com/docs/3.3/css/#images -->
+    <!-- 첫번째 소스 코딩 확인 : 반응형 이미지 처리 -->
+    <!-- bootstrap.css 파일에서 img-responsive 키워드 검색해서 확인 바랍니다.
+    즉, 아래의 소스 코드에서 class="img-responsive" 적용 전과
+    적용 후를 비교 확인 바랍니다! -->
+    <!-- <img src="images/bootstrap_ex.jpg" alt="반응형 웹 이미지" class="img-responsive"> -->
+
+    <!-- 두번째 소스 코딩 확인 : 이미지 외곽 라운드 처리 -->
+    <!-- 다음 소스 코드 크롬 브라우저 실행 후 F12 -
+        css 탭에서 .img-rounded {border-radius: 6px;} 값조정하면서 확인해 보고,
+        bootstrap.css 파일에서 img-rounded 키워드 검색해서 확인 바랍니다! -->
+    <!-- <img src="images/bootstrap_ex.jpg" alt="반응형 웹 이미지" class="img-rounded"> -->
+
+    <!-- 세번째 소스 코딩 확인 : 이미지 원형 처리 -->
+    <!-- 다음 소스 코드 크롬 브라우저 실행 후 F12 -
+        css 탭에서 .img-circle {border-radius: 50%;} 값조정하면서 확인해 보고,
+        bootstrap.css 파일에서 img-circle 키워드 검색해서 확인 바랍니다! --> 
+    <!-- <img src="images/bootstrap_ex.jpg" alt="둥근 이미지 표현" class="img-circle"> -->
+
+</body>
+</html>

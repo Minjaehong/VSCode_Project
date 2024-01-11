@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_dom_getPropertyValue.html 소스 코딩</title>
+    <style>
+        span{visibility: hidden; color: blue;}
+    </style>
+    <script>
+        function show(){
+            var objArray = document.getElementsByTagName('span');
+            console.log(objArray);
+            for(var i=0; i<objArray.length;i++){
+                var obj = objArray[i];
+                // window.getComputedStyle() 메서드는 인자로 전달받은 
+                // 요소(태그)의 모든 css 속성값을 담은 객체를 반환 처리합니다.
+                var style = window.getComputedStyle(obj);
+                // console.log(style);
+                // getPropertyValue() : 내부 스타일로 정의된 속성값을 반환처리함.
+                var v = style.getPropertyValue("visibility");
+
+                var visib = window.getComputedStyle(obj).getPropertyValue("visibility");
+                console.log(visib);
+                if (v=="hidden"){
+                    obj.style.visibility = "visible";
+                }else{
+                    obj.style.visibility = "hidden";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>다음 빈 곳에 숨은 단어는?
+        <button onclick="show()">show/hide</button>
+    </h3>
+    <hr>
+    <ul>
+        <li>I ( <span>love</span> ) you.</li>
+        <li>CSS is Cascading
+            ( <span>Style</span> ) Sheet.
+        </li>
+        <li> 응답하라! ( <span>1994</span> )</li>
+    </ul>
+</body>
+</html>

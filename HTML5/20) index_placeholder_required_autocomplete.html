@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_placeholder_required_autocomplete.html 소스 코딩</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>필수 입력 유효성 검사</legend>
+            <p><label for="id">* 아이디 : <input type="text" id="id" title="아이디 입력" required="required" placeholder="아이디 입력"></label></p>
+            <p><label for="pw">* 비밀번호 : <input type="password" id="pw" title="비밀번호 입력" required="required" placeholder="비밀번호 입력"></label></p>
+            <p><input type="submit" value="확인"></p>
+        </fieldset>
+        <fieldset>
+            <legend>자동 완성 기능</legend>
+            <p><label for="phone">* 전화번호 : <input type="text" id="phone" title="전화번호 입력" required="required" placeholder="전화번호 입력" autocomplete="off"></label></p>
+            <p><label for="email">* 이메일 : <input type="text" id="email" title="이메일 입력" required="required" placeholder="이메일 입력" autocomplete="on"></label></p>
+            <p><input type="submit" value="확인"></p>
+        </fieldset>
+    </form>
+</body>
+</html>

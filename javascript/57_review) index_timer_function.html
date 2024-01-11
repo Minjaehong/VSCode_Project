@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 함수 활용</title>
+    <script>        
+        window.onload = function(){
+            var stopBt = document.getElementById('stopBt');
+            var i = 0;
+            // setInterval() 메서드는 일절 시간마다 지정한 함수를 반복적으로 실행하게 해주는 매서드입니다.
+            var increase = setInterval(function(){
+                i++;
+                alert('3초마다 실행' + i);
+            },3000); // 3000은 3000ms을 의미하고, 3s(3초)를 나타냅니다. clearInterval() 메서드는 setInterval() 메서드를 중지시키는 메서드입니다.
+            stopBt.onclick = function(){
+                clearInterval(increase);
+            }
+        }
+    </script>
+    <style>
+        div{background: yellowgreen; width: 100px; height: 100px; text-align: center; line-height: 100px;}
+    </style>
+</head>
+<body>
+    <div id="stopBt">멈춤</div>
+</body>
+</html>

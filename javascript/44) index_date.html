@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체 활용</title>
+    <script>
+        // Date 객체 : 날짜와 시간에 대한 정보 값을 얻거나 설정할 수 있습니다.
+        var dateObj = new Date();
+        var dateInfo = {
+            year:dateObj.getFullYear(),
+            month:dateObj.getMonth(),
+            date:dateObj.getDate(),
+            hours:dateObj.getHours(),
+            minutes:dateObj.getMinutes(),
+            nowDate:dateObj.toUTCString()
+        }
+        for (const i in dateInfo) {
+            document.write(i + ' : ' + dateInfo[i] + '<br>');    
+        }
+
+        // setTime() 함수를 이용해서 일자 구하는 공식 활용
+        var today = new Date(2023, 12, 1);
+        document.write('today 변수값 = ' + today + '<br>');
+        // today 변수값 = Mon Jan 01 2024 00:00:00 GMT+0900 (한국 표준시)
+
+        document.write('today 변수에 저장된 시간값 = ' + today.getTime() + '<br>');
+        // today 변수에 저장된 시간값 = 1704034800000
+        
+        var afterDay = new Date(2023, 12, 10);
+        document.write('afterDay 변수값 = ' + afterDay + '<br>');    
+        // afterDay 변수값 = Wed Jan 10 2024 00:00:00 GMT+0900 (한국 표준시)
+
+        document.write('afterDay 변수에 저장된 시간값 = ' + afterDay.getTime() + '<br>');
+        // afterDay 변수에 저장된 시간값 = 1704812400000
+
+        var diffDay = afterDay.getTime() - today.getTime();
+        document.write('차이값 = ' + diffDay + '<br>'); // 차이값 = 777600000
+        
+        // 1000(밀리초), 60(초), 60(분), 24(시간)
+        var willDay = Math.ceil(diffDay / 1000 / 60 / 60 / 24);
+        document.write('일자 환산값 = ' + willDay + '일'); // 일자 환산값 = 9일
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

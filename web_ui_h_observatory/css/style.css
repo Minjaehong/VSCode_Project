@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+*{ margin: 0 auto;  padding: 0;
+    list-style: none; font-family: "맑은 고딕";
+    color:#333; }
+
+body{ width: 1200px; background-color: #fff; font-size: 20px;}
+
+a{text-decoration: none; display: block;}
+
+header{height: 100px; width: 1200px; 
+    /* background-color: orange; */
+}
+
+.top{height: 100px; width: 1200px;
+    /* background-color: olivedrab; */
+}
+
+.logo{float: left; height: 100px; width: 250px;
+    /* background-color: aqua; */
+}
+
+.logo img{float: left; height: 42px; width: 180px; margin-top: 30px; margin-left: 25px;}
+
+.menu{float: right; height: 100px; width: 800px; z-index: 1;
+/* background-color: bisque; */
+}
+
+.navi{float: right; margin-top: 30px; margin-right: 10px;}
+.navi>li{float: left;}
+.navi>li>a{height: 40px; width: 180px; line-height: 40px; font-size: 16px; font-weight: bold; text-align: center; background-color: #0066ad; color: #fff;}
+.navi>li>a:hover{background-color: #30a3f3;}
+
+.submenu{width: 180px; position: absolute; z-index: 1;
+     display: none;
+}
+
+.submenu>li>a{height: 35px; line-height: 35px; font-size: 15px; font-weight: bold; text-align: center; background-color: #ababab; color: #fff;}
+
+.submenu>li>a:hover{background-color: #30a3f3;}
+
+.bodywrap{
+    /* .imgslide 영역 높이 300px + .contents 영역 높이 200px */
+    height: 500px;
+    /* .imgslide 영역 너비, .contens 영역 너비 */
+    width: 1200px;
+    /* background-color: olive; */
+}
+
+.imgslide{height: 300px; width: 1200px;
+    position: relative; overflow: hidden;
+/* background-color: orangered; */
+}
+
+.imgslide>a{position: absolute;}
+
+.imgtext{height: 50px; width: 500px;
+    position: absolute;
+    margin: -30px 0 0 -250px;
+    text-align:center;
+    color: #fff;
+    font-weight: bold;
+    line-height: 50px;
+    background-color: rgba(40, 40, 40, 0.5);
+    left: 50%;
+    top: 45%;
+}
+
+.contents{float: left; height: 200px; width: 1200px; position: absolute;
+    /* background-color: orchid; */
+}
+.tabmenu{float: left; height: 180px; width:395px; margin-top: 10px; 
+margin-bottom: 10px;
+/* background-color: olivedrab; */
+}
+.tabmenu>li{  float: left;  width: 100px;
+    line-height: 30px;
+}
+.tabmenu>li>a{display: block; font-size: 16px;
+    text-align: center; background-color: #ccc; border: 1px solid #ddd;
+    border-bottom: none;
+}
+.tabmenu>li>a:hover{background-color: #eee;}
+.tabmenu>li:first-child a{border-right:none;}
+.tabmenu>li.active>a{background-color: #fff;}
+
+.tabmenu>li div{ position: absolute;
+    left: 0; height: 0;
+    overflow: hidden;
+}
+
+/* .notice{display: none;} */
+
+.tabmenu>li.active div{
+    width: 393px; height: 148px;
+    border: 1px solid #ddd; z-index: 1;
+}
+.notice ul{
+    float: left; width: 393px; margin-top: 12px; margin-bottom: 12px;
+}
+.notice li{  height: 32px;  line-height: 32px;
+    font-size: 15px; margin-left: 10px;
+    margin-right: 10px;
+}
+.notice li:nth-child(2n){background-color: #ccc;}
+.notice li span{float: right;}
+.notice li:hover{font-weight: bold;}
+
+.gallery li{float: left; margin-top: 15px; margin-left: 8px;}
+.gallery img{height: 100px; width: 100px; padding: 10px;}
+.gallery li:hover{opacity: 0.5;}
+
+.otherwrap{float: right; height: 200px; width: 800px;
+    /* background-color: orangered; */
+}
+.banner{float: left; height: 180px; width: 395px; margin-top: 10px; margin-bottom: 10px;
+    /* background-color: orange; */
+}
+.banner img{float: left; height: 180px; width: 395px;}
+.bntext{float: left; height: 40px; width: 300px;
+position: absolute; text-align: center; left: 450px; top: 80px; color: #fff; font-weight: bold; line-height: 40px; background-color: rgba(40, 40, 40, 0.3);}
+.banner img:hover{opacity: 0.5;}
+
+.shortcut{float: right; height: 180px; width: 400px;
+    margin-top: 10px; margin-bottom: 10px;
+    /* background-color: olivedrab; */
+}
+.shortcut img{float: right; height: 180px; width: 400px;}
+.sctext{float: right; height: 40px; width: 300px; position: absolute; text-align: center; color: #fff; font-weight: bold; line-height: 40px; background-color: rgba(40, 40, 40, 0.3); left: 850px; top: 80px;}
+.shortcut img:hover{opacity: 0.5;}
+
+#layer{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: rgba(0, 0, 0, 0.6); z-index: 1;
+display: none;
+}
+#layer.active{display: block;}
+.layer_up{width: 500px; height: 400px; position: fixed; left: 37%; top: 10%; background: #fff;}
+.uptitle{margin-top: 30px; text-align: center; line-height: 16px; font-size: 20px; font-weight: bold;}
+.upbody{padding: 30px; text-align: center; font-size: 16px; line-height: 30px;}
+.btn{height: 20px; width: 80px; cursor: pointer; display: block; text-align: center; font-size: 15px; font-weight: bold; background: #ccc; border-radius: 3px; position: absolute; right: 10px; bottom: 10px;}
+
+footer{height: 100px; width: 1200px;
+    background-color: #30a3f3;
+}
+.btlogo{float: left; height: 100px; width: 250px;
+    /* background-color: orange; */
+}
+.btlogo img{float: left; height: 42px; width: 180px; margin-top: 30px; margin-left: 25px;}
+
+.site{float: right; height: 100px; width: 600px;
+/* background-color: orangered; */
+}
+.btmenu{height: 50px; width: 600px;
+    /* background-color: orange; */
+    text-align: center;
+    font-size: 18px; line-height: 30px;
+}
+.btmenu li{margin-top: 10px; display: inline-block; width: 100px;}
+.btmenu li:hover{font-weight: bold;}
+
+.copy{height: 50px; width: 600px;
+    /* background-color: orangered; */
+    text-align: center; font-size: 18px; line-height: 30px;
+}

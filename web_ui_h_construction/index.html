@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남율건설</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <!-- defer 속성은 script가 잠깐 지연 되도록 하여
+      HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <!-- header>(.top>.logo{로고자리}+nav.menu{메뉴자리}) -->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <!-- ul.navi>(li>a+(ul.submenu>(li>a)*3))*4 -->
+                <ul class="navi">
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">사업영역</a>
+                        <ul class="submenu">
+                            <li><a href="#">주택사업</a></li>
+                            <li><a href="#">건축사업</a></li>
+                            <li><a href="#">인테리어</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">입주정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주캘린더</a></li>
+                            <li><a href="#">입주모임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul class="submenu">
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="#">기술교육</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div> <!-- end .top -->
+    </header> <!-- end header -->
+
+    <!-- .bodywrap>(.imgslide{이미지 슬라이드 자리})+(.contents>.notice{공지사항 자리}+.gallery{갤러리 자리}+.shortcut{바로가기 자리}) -->
+    <div class="bodywrap">
+        <div class="imgslide">
+            <!-- (a>(img+span.imgtext))*3 -->
+            <a href="#">
+                <img src="images/img1.jpg" alt="슬라이드 이미지 1">
+                <span class="imgtext">모델하우스 VR 체험</span>
+            </a>
+            <a href="#">
+                <img src="images/img2.jpg" alt="슬라이드 이미지2">
+                <span class="imgtext">건축과 인테리어</span>
+            </a>
+            <a href="#">
+                <img src="images/img3.jpg" alt="슬라이드 이미지 3">
+                <span class="imgtext">남율건설 인재 채용</span>
+            </a>
+        </div>
+        <div class="contents">
+            <div class="notice">
+                <!-- (.tab>h4{공지사항})+(ul>(li>a>span)*4) -->
+                <div class="tab">
+                    <h4>공지사항</h4>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#"> 상반기 신입/경력 사원 채용 공고
+                            <span>2024.01.01</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">건설의 날 기념 행사를 안내해 드립니다.
+                            <span>2024.01.02</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">대학생 대상 건설 현장 탐방기
+                            <span>2024.01.03</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">남율건설, 시공평가 순위 상위 5위 달성
+                            <span>2024.01.04</span>
+                        </a>
+                    </li>
+                </ul>
+
+                
+            </div>
+            <div class="gallery">
+                <!-- (.tab>h4{갤러리})+(ul>(li>a>img)*3) -->
+                <div class="tab">
+                    <h4>갤러리</h4>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon1.jpg" alt="갤러리 이미지 1">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon2.jpg" alt="갤러리 이미지 2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon3.jpg" alt="갤러리 이미지 3">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="shortcut">
+                <!-- a>img+span.sctext{바로가기} -->
+                <a href="#">
+                    <img src="images/shortcut.jpg" alt="바로가기 이미지">
+                    <span class="sctext">바로가기</span>
+                </a>
+            </div>
+        </div> <!-- end .contents -->
+    </div> <!-- end .bodywrap -->
+
+    <!-- 레이어 팝업창 영역 -->
+    <!-- #modal>(.modal_up>(.uptitle{상반기 신입/사원 채용 공고})+(.upbody{국내 최고의 건설회사로})+(.btm{닫기})) -->
+    <div id="modal">
+        <div class="modal_up">
+            <div class="uptitle">상반기 신입/사원 채용 공고</div>
+            <div class="upbody">국내 최고의 건설회사로 발돋움하고 있는 남율건설에서는 
+                열정을 가지고 진취적으로 도전하는 신입/경력 사원을 모집합니다.
+                남율건설과 함께 하실 역량있는 인재들의 많은 지원을 기다립니다.</div>
+            <div class="btn">닫기</div>
+        </div> <!-- end modal_up -->
+    </div> <!-- end modal -->
+
+    <!-- footer>(.copy{Copyright 자리})+(.site>.btmenu{하단 메뉴 자리}+.familysite{패밀리 사이트 자리}) -->
+    <footer>
+        <div class="copy">
+            COPYRIGHT © by WEBDESIGN. ALL RIGHTS RESERVED
+        </div>
+        <div class="site">
+            <div class="btmenu">
+                <!-- ul>(li>a{하단메뉴$})*3 -->
+                <ul>
+                    <li><a href="#">하단메뉴1</a></li>
+                    <li><a href="#">하단메뉴2</a></li>
+                    <li><a href="#">하단메뉴3</a></li>
+                </ul>
+            </div>
+            <div class="familysite">
+                <!-- select>option{패밀리사이트$}*3 -->
+                <select name="sitelist" id="sitelist">
+                    <option value="#">패밀리사이트1</option>
+                    <option value="#">패밀리사이트2</option>
+                    <option value="#">패밀리사이트3</option>
+                </select>
+            </div>
+        </div> <!-- end site -->
+    </footer> <!-- end footer -->
+    <p>
+        <a href="http://validator.kldp.org/check?uri=referer"
+          onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+          src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+      </p>
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="올바른 CSS입니다!" />
+        </a>
+    </p>
+          
+</body>
+</html>

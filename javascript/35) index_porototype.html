@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_prototype.html 소스 코딩</title>
+    <script>
+        function Triangle(b,h){
+            this.base =b;
+            this.height=h;
+        }
+        Triangle.prototype.area=function(){
+            return this.base*this.height/2;
+        }
+        Triangle.prototype.printOut = function(){
+            return '밑변 : ' + this.base + ' 높이 : ' + this.height + ' 넓이 : ' + this.area();
+        }
+        var triangle1 = new Triangle(30,20);
+        document.write(triangle1.area() + '<br>');
+
+        var triangle2 = new Triangle(80,40);
+        document.write(triangle2.printOut());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

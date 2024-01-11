@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_object_literal.html 소스 코딩</title>
+    <script>
+        // 객처 리터럴
+        var circle = {
+            color: 'yellow',
+            diameter : 100,
+            radius : function(){
+                return this.diameter / 2 ;
+            }
+        }
+        document.write(circle.color + ',' + circle.diameter + ',' + circle.radius() + '<br>')
+
+        // 객처 생성자 함수
+        function Triangle(b,h) {
+            this.base = b ;
+            this.height = h;
+            this.area = function(){
+                return this.base*this.height/2;
+            };            
+        }
+        var triangle1 = new Triangle(15,15);
+        document.write(triangle1.base + '<br>');
+        document.write(triangle1.height + '<br>');
+        document.write(triangle1.area() + '<br>');
+
+        var triangle2 = new Triangle(25,10);
+        document.write(triangle2.base + '<br>');
+        document.write(triangle2.height + '<br>');
+        document.write(triangle2.area() + '<br>');
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

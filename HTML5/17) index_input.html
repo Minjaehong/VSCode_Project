@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_input.html 소스 코딩</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>type 속성</legend>
+            <!-- required 속성을 추가하면 그 요소는 필수적으로 데이터 입력을 해야됨 -->
+            <p>아이디 : <input type="text" required></p>
+            <p>비밀번호 : <input type="password"></p>
+            <p>검색 : <input type="search"></p>
+            <p>이메일 : <input type="email"></p>
+            <p>전화번호 : <input type="tel"></p>
+            <p>컬러선택 : <input type="color"></p>
+            <p>수량 : <input type="number" min="1" max="10" value="1"></p>
+            <p>만족도 : <input type="range" min="1" max="10" value="1"></p>
+
+            <!-- label 태그 적용 두가지 방법 -->
+            <!-- label 태그를 적용하면, 선택영역(여기서는 이름을 선택해도 되게함)을 확장해 줌 -->
+            <!-- label 태그 적용 첫번째 방법: label for와 id 속성 매칭 적용 -->
+            <!-- label 태그 적용 두번째 방법: label 태그 안에 태그 적용(여기서는 input 태그를 넣어줌) -->
+            
+            <p>
+                좋아하는 애완동물은?<br>
+                <!-- label 태그 적용 첫번째 방법 -->
+                <input type="radio" name="like" id="pet1"><label for="pet1">강아지</label>
+                <input type="radio" name="like" id="pet2"><label for="pet2">고양이</label>
+                <input type="radio" name="like" id="pet3" checked="checked"><label for="pet3">수달</label>
+                <br>
+                좋아하는 과일은?<br>
+                <!-- label 태그 적용 두번째 방법 -->
+                <label><input type="radio" name="fruit">사과</label>
+                <label><input type="radio" name="fruit">포도</label>
+                <label><input type="radio" name="fruit">수박</label>
+                <label><input type="radio" name="fruit">자두</label>                
+            </p>
+            <P>
+                좋아하는 음식은?<br>
+                <label><input type="checkbox" name="food" >킹크랩</label>
+                <label><input type="checkbox" name="food" >갈비찜</label>
+                <label><input type="checkbox" name="food" checked="checked">치킨</label>
+                <label><input type="checkbox" name="food" >냉면</label>
+
+            </P>
+            <p><input type="submit" value="전송"></p>
+            <p><input type="reset" value="취소"></p>
+            <p><input type="button" value="확인"></p>
+            <p><input type="image" src="HTML5/images/bt.png" alt="검색"></p>
+            <p><input type="file"></p>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

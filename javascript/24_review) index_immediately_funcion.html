@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시 실행 함수</title>
+    <script>
+        // 즉시 실행 함수 = 익명 함수 중에서 일회성으로 활용하는 함수입니다. 이것은, 선언과 동시에 함수가 실행되며, 함수명이 없기 때문에 재호출할 수는 없습니다. 그래서 , 보통 처음 한번만 실행하는 초기화 코드에 활용합니다.
+        (function(){
+            iife();
+        })();
+        function iife(){
+            console.log('즉시 실행 함수1');
+        } 
+        var instant = (function(){
+            console.log('즉시 실행 함수2');
+        })();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

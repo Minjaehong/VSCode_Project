@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set 객체 이해</title>
+    <script>
+        // 변수 sup에 Set형 자료 구조를 생성해줍니다. 이때, 생성되는 Set형 자료 구조에는 값(Value)이 들어갈 수 있으며,  다만 중복된 값(Value)은 허용되지 않게 됩니다.
+        var sup = new Set();
+        sup.add('a');
+        sup.add('c');
+        sup.add('a'); //중복 입력 안됨
+        sup.add('b');
+
+        document.write(sup.size + '<br>');
+        document.write(sup.has('c') + '<br>');
+        for(const value of sup.values()){
+            document.write(value + ' ');
+        }
+        document.write('<br>');
+        sup.delete('a');
+        document.write(sup.has('a') + '<br>');
+        sup.clear();
+        document.write(sup.size);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

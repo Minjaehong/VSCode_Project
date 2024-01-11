@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math 객체 활용</title>
+    <script>
+        var luckyNumber =[];
+        var num = 0;
+        for(var i =1 ; i <= 100; i++){
+            luckyNumber.push(i); // 1(index 0) ~ 100*(index99)
+        }
+        num = Math.floor(Math.random()*luckyNumber.length); // 0 ~ 99
+        document.write(luckyNumber.toString() + '<br>');
+        document.write('오늘 행운의 당첨 번호 = ' + luckyNumber[num] +'입니다!')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

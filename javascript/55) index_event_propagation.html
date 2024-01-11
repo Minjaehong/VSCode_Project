@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopPropagation 메서드 활용 </title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #outer{
+            background: #f00;
+            padding: 20px;
+        }
+        #inner{
+            background: #0f0;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var outer = document.getElementById('outer');
+            var inner = document.getElementById('inner');
+            outer.onclick = function(){
+                alert('부모 이벤트 실행');
+            }
+            inner.onclick = function(event){
+                alert('자식 이벤트 실행');
+                event.stopPropagation();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">클릭</div>
+    </div>
+
+</body>
+</html>

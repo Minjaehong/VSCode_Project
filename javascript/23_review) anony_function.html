@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수 활용</title>
+    <script>
+        // 익명 함수는 호이스팅을 허용하지 않습니다. 그렇기 때문에, 선언하기 전에 호출(사용)하면 에러가 납니다.
+        // compute();
+        var compute = function () {
+            var x = 0.5;
+            var y = 10;
+            var result = x*y;
+            console.log(result);
+        }
+        compute();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

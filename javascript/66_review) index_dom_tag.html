@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소/태그 생성</title>
+    <style>
+        div{
+            position: fixed; left: 100px; top: 10px; width: 200px; height: 200px;
+            background: #718c00; text-align: center; line-height: 160px;
+        }
+    </style>
+    <script>
+        function createEle(){
+        var bt = document.getElementById('bt');
+        function popup(){
+            var div = document.createElement('div');
+            var p = document.createElement('p');
+            var txt = document.createTextNode('자바스크립트~ ^^!');
+
+            p.appendChild(txt);
+            div.appendChild(p);
+            document.body.appendChild(div);
+            }
+            bt.onclick = popup;
+        }
+        addEventListener('load',createEle);
+        
+    </script>
+</head>
+<body>
+    <button id="bt">요소생성</button>
+</body>
+</html>

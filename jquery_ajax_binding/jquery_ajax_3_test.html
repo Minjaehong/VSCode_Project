@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Ajax </title>
+<style>
+	table, tr, td{border: 1px solid red; text-align: center; border-collapse: collapse;}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+	// html 웹페이지에서 가상 회원 데이터(json)를 불러와서 데이터 바인딩 처리하는 예시입니다.
+$(function() {
+	$.ajax({
+		// 아래의 웹주소에서
+		url:"http://192.168.0.88/dataset/MOCK_DATA.json",
+		// 데이터 처리 형식은 json으로 하고
+		dataType: "json",
+		// 데이터 처리가 성공하면, 익명함수의 data 매개변수에 정보를 대입합니다.
+		success: function(data){
+			// 앞서, data 매개변수에 있는 정보들을 Console 탭에 표시합니다.
+			console.log(data);
+			if(data.length > 0){
+				// table 태그를 tb 변수에 생성해 줍니다.
+				var tb = $("<table />");
+				// fon ... in ... 문을 활용하여 data 매개변수에 있는 정보를 i 변수에 대입하여, 반복적으로 처리해 줍니다.
+				for(var i in data){
+					
+					var $id = data[i].id;  // 이때, data[i].id 변수에 할당된 데이터를 $id 변수에 대입해 줍니다.
+					var $first_name = data[i].first_name; // 이때, data[i].first_name 변수에 할당된 데이터를 $first_name 변수에 대입해 줍니다.
+					var $last_name = data[i].last_name; // 이때, data[i].last_name 변수에 할당된 데이터를 $last_name 변수에 대입해 줍니다.
+					var $email = data[i].email; // 이때, data[i].email 변수에 할당된 데이터를 $email 변수에 대입해 줍니다.
+					var $gender = data[i].gender; // 이때, data[i].gender 변수에 할당된 데이터를 $gender 변수에 대입해 줍니다.
+
+					// 생선된 tr에 추가된 td 태그dp text() 메서드를 활용하여 $id, $first_name, $last_name, $email, $gender 변수값을 추가해 줍니다. 그리고 좌측에 있는 row 변수에 대입해서
+					var row = $("<tr/>").append(
+						$("<td/>").text($id),
+						$("<td />").text($first_name),
+						$("<td />").text($last_name), 
+						$("<td />").text($email),
+						$("<td />").text($gender)   
+					);
+					// 앞서 생성한 row 변수 데이터는 tb 변수에 append() 메서드로 추가해 줍니다.
+					tb.append(row);
+				}
+				// 그리고, tb 변수에 있는 데이터를 class wrap에 append() 메서드를 활용하여 추가해 줍니다.
+				$(".wrap").append(tb);			
+			}
+		}
+	})
+});
+</script>
+</head>
+<body>
+	<div class="wrap"></div>
+</body>
+</html>

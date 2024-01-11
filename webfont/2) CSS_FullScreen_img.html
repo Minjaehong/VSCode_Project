@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_FullScreen_img.html 소스 코딩</title>    
+    <!-- css 활용 FullScreen 이미지 배경 구현 -->
+    <!-- CSS3가 아닌 기존의 CSS만으로 FullScreen 이미지 배경 구현 시에는
+    background-size 속성이 아닌 img 태그를 사용하여 이미지를 삽입하고,
+    div 태그로 텍스트나 다른 요소를 그 위에 올려놓는 방식으로 구현할 수 있습니다. -->
+    <style>
+        /* 눈누 : 한글폰트 적용 */
+        /* https://noonnu.cc/font_page/1282 */
+        @font-face {
+            font-family: 'GapyeongWave';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongWave.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* 다폰트(dafont) : 영문폰트 적용 */
+        /* https://www.dafont.com/egg.font */
+        @font-face {
+            font-family: 'egg';
+            src: url('font/egg/Egg.ttf') format('truetype');
+        }
+        .bg{min-height: 100%; min-width: 1024px; width: 100%; height: auto; position: fixed; top:0; left:0;}
+        #content{ position: absolute; top: 50%;  left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1{ color:#5CB3E8; font-size: 8em;  font-style: italic;
+            text-shadow: 2px 2px 3px #222, 2px 2px 3px black;
+            text-transform: uppercase;
+            font-family: 'GapyeongWave';           
+        }
+        .fontAdd{font-family: 'egg';}
+    </style>
+    <!--[if lt IE9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <img src="images/sky.jpg" alt="배경 이미지" class="bg">
+    <!-- #content>h1{Sky &amp; Birds} -->
+    <div id="content">
+        <h1>Sky &amp; Birds</h1>
+        <h1 class="fontAdd">myFont Add</h1>
+    </div>
+</body>
+</html>

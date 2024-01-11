@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_for_in.html 소스 코딩</title>
+    <script>
+        // for .. in문 : 예문에서는 i는 속성명을 나타내며, info[i]는 속성의 값을 나타냅니다.
+        var info =  {
+            subjecty : 'javascript',
+            credit : 3,
+            days : 20,
+            tuition : 10000
+        };
+        for ( var i in info){
+            document.write(i + ' : ' + info[i] + '<br>');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

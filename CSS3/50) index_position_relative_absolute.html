@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_position_relative_absolute.html 소스 코딩</title>
+    <style>
+        #parent1{
+            position: relative;
+            background-color: yellow;
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 300px;
+            height: 300px;
+        }
+        #parent2{
+            position: absolute;
+            /* position: relative; */
+            top: 30px;
+            left: 30px;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        #child{
+            /* position: absolute; */
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent1">
+        <div id="parent2">
+            <div id="child"></div>
+        </div>
+    </div>
+</body>
+</html>

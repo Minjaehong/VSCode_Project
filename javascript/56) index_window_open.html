@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 객체의 open 메서드 활용</title>
+    <script>
+        window.onload = function(){
+            var bt = document.getElementById('bt');
+            bt.onclick = function(){
+                // window 객체의 open() 메서드의 첫번째 매개변수값은 순서대로 문서주소, 윈도우이름, 폭, 높이, left 위치, top 위치를 나타냄
+                window.open('http://kbs.co.kr','kbs','width=500, height=500, left=100, top=10')
+            };
+        }
+    </script>
+</head>
+<body>
+    <div id="bt">새창열기</div>
+</body>
+</html>

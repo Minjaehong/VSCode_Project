@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_parameter.html 소스 코딩</title>
+    <script>
+        function exmamPass(name, html , css, js) {
+            var comment = name + '학생은 ';
+            if(html >= 60 && css >= 60 && js >= 60){
+                comment += '전과목 PASS';
+            }else{
+                if(html< 60){
+                    comment += 'html 재시험, '
+                }
+                if(css< 60){
+                    comment += 'css 재시험, '
+                }
+                if(js< 60){
+                    comment += 'javascrript 재시험 '
+                }
+            }
+            return comment;
+        }
+        document.write(exmamPass('장나라',90,70,80) + '<br>');
+        document.write(exmamPass('김희선',90,40,30));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

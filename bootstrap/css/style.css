@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+*{
+    margin: 5px;
+}
+
+
+
+.fontColorRed{
+    color: red;
+    font-weight: bold;
+}
+
+.fontStyleItalic{
+    font-style: italic;
+}
+
+.fontSize20px{
+    font-size: 20px;
+}
+
+.mjhbold{
+    font-weight: bold;
+    font-style: italic;
+    color: #9cd3e4 !important;
+}
+
+.fs10{
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.fsItalic{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.fcYellow{
+    color: yellowgreen;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #3640c4; 
+}
+
+.bgc-hover1:hover{
+    background-color: rgb(30, 28, 184);
+    color: #fff;
+}
+
+.bgc-hover2:hover{
+    background-color: rgb(28, 109, 184);
+    color: #fff;
+}
+
+.bgc-hover3:hover{
+    background-color: rgb(28, 184, 163);
+    color: #fff;
+}
+
+.bgc-hover4:hover{
+    background-color: rgb(88, 28, 184);
+    color: #fff;
+}

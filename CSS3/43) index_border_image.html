@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_border_image.html 소스 코딩</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        div{
+            width: 600px;
+            height: 50px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 10px solid transparent;
+        }
+        .round{
+            border-image: url(img/border.png) 27 round;
+            /* webkit = 크롬, 사파리  브라우저  */ 
+            /* moz = 파이어폭스  브라우저  */
+            /* o = 오페라  */
+            /* ms = 익스플로러  */
+            -webkit-border-image: url(img/border.png) 27 round;
+        }
+        .repeat{
+            border-image: url(img/border.png) 27 repeat;
+            -webkit-border-image: url(img/border.png) 27 repeat;
+        }
+        .stretch{
+            border-image: url(img/border.png) 27 stretch;
+            -webkit-border-image: url(img/border.png) 27 stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="round">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, quaerat?</div>
+    <div class="repeat">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, quaerat?</div>
+    <div class="stretch">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, quaerat?</div>
+</body>
+</html>

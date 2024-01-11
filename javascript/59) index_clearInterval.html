@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearInterval </title>
+    <script>
+        window.onload = function () {
+            var bt = document.getElementById('bt');
+            var i = 0;
+            var increase = setInterval(function () {
+                i++;
+                alert(i);
+            },2000);
+            bt.onclick = function () {
+                // clearInterval() 메소드는 setInterval() 메서드를 중지시키는 메서드입니다.
+                clearInterval(increase);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="bt">멈춤</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3_FullScreenBG_size_cover.html 소스 코딩</title>
+    <style>
+        /* 눈누 웹폰트 사용
+        https://noonnu.cc/font_page/1248 */
+        @font-face {
+            font-family: 'YEONGJUPunggiGinsengTTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/YEONGJUPunggiGinsengTTF.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        html{
+            background:url(images/myImage.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        #content{
+            /* 요소 중앙정렬 처리 */
+            position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+            font-family: 'YEONGJUPunggiGinsengTTF';
+        }
+        h1{color: white; font-size: 8em; font-style: italic; text-shadow: 2px 2px 3px #222, 2px 2px 3px black;
+        text-transform: uppercase;}
+    </style>
+</head>
+<body>
+    <!-- #content>h1{Have a Nice Day!} -->
+    <div id="content">
+        <h1>Have a Nice Day!</h1>
+    </div>
+</body>
+</html>

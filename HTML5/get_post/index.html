@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 태그 이해 및 활용</title>
+</head>
+<body>
+    <form action="./get_post_data.jsp" method="post">
+        <fieldset>
+            <legend>로그인</legend>
+            <!-- name: 백엔드에서 요청단에서 파라미터로 받을때 명칭, id:프로트엔드에서 javascript에서 적용할 때 -->
+            <p>아이디 : <input type="text" id="frontInputId" name="frontInputId"> </p>
+            <p>비밀번호: <input type="password" name="frontInputPw"> </p>
+        </fieldset>
+        <input type="submit" value="전송!">
+        <input type="submit" value="취소!">
+    </form>
+</body>
+</html>

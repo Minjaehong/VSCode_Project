@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_animation_keyframes.html 소스 코딩</title>
+    <style>
+        @keyframes sample {
+            0%{background: firebrick; transform: translate(0,0);}
+            50%{background: cornflowerblue; transform: translate(30px,20px);}
+            100%{background: forestgreen; transform: translate(0,0);}
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background: firebrick;
+            animation-name: sample;
+            animation-duration: 4s;
+            /* 애니메이션 끝나고 나면 마지막 속성 유지 */
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+<body>
+    <p>Animation..</p>
+</body>
+</html>

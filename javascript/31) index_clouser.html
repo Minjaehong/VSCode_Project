@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저 이해</title>
+    <script>
+        // 클로저(Closure) : 일반적으로 함수 내 지역 변수는 함수 밖에서 참조할 수 없지만,클로져는 함수 내 지역 변수를 함수 밖에서도 참조할 수 있게 해줍니다.
+        function multiply(n){
+            return function(){
+                return n *= n;
+            }
+        }
+        var num1 = multiply(10);
+        document.write(num1()); // 10 * 10 = 100
+        document.write('<br>');
+        document.write(num1()); // 100 * 100 = 10000
+        document.write('<br>');
+
+        var num2 = multiply(20);
+        document.write(num2()); // 20 * 20 = 400
+        document.write('<br>');
+        document.write(num2()); // 400 * 400 = 160000
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

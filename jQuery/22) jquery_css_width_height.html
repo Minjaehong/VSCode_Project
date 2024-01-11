@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_width_height.html 소스 코딩</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        div{padding: 20px; margin: 20px; background: #ff6600;}
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").width(150).height(150);
+            console.log("width = " + $("div").width()); // width = 150
+            console.log("height = " + $("div").height()); // height = 150
+            console.log("innerWidth = " + $("div").innerWidth()); 
+            // innerWidth = 190 : left padding 20 + width 150 + right padding 20 = 190
+            console.log("innerHeight = " + $("div").innerHeight()); 
+            // innerHeight = 190 : top padding 20 + height 150 + bottom padding 20 = 190
+            console.log("outerWidth = " + $("div").outerWidth()); 
+            // outerWidth = 232 : width 150 + left padding 20 + right padding 20 + left border 1 + right border 1 = 192
+            console.log("outerHeight = " + $("div").outerHeight()); 
+            // outerHeight = 232 : height 150 + top padding 20 + bottom padding 20 + top border 1 + bottom border 1 = 192
+            console.log("outerWidth = " + $("div").outerWidth(true)); 
+            // outerWidth = 232 : width 150 + left padding 20 + right padding 20 + left border 1 + right border 1 + left margin 20 + right margin 20 = 232
+            console.log("outerHeight = " + $("div").outerHeight(true)); 
+            // outerHeight = 232 : height 150 + top padding 20 + bottom padding 20 + top border 1 + bottom border 1 + top margin 20 + bottom margin 20 = 232
+        });
+    </script>
+</head>
+<body>
+    <div>내용</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_textarea_select.html 소스 코딩</title>
+</head>
+<body>
+    
+    <form action="#" method="post">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>
+                가입목적 : <br>
+                <textarea name="purpose" id="purpose" cols="100" rows="5"></textarea>            
+            </p>
+            <p>전화번호 : 
+                <select name="telNumber" id="telNumber">
+                    <option value="localNumber">지역번호</option>
+                    <option value="02" selected="selected">02</option>
+                    <option value="031">031</option>
+                    <option value="044">044</option>
+                </select>
+                <input type="text" name="number" id="number">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

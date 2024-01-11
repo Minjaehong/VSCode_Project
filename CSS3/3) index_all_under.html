@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index 전체, 하위 선택자.html 소스 코딩</title>
+    <style>
+        /* 전체 선택자는 * 문자를 활용하여 전체적으로 css 표현을 적용함 */
+        *{color:blue;}
+        /* 하위 선택자는 태그 내부에 있는 모든 해당 요소를 가리키며, 선택자 사이를 공백으로 분리해서 문법 적용해 줍니다. */
+        .abox p{
+            color:yellowgreen;
+        }
+        li::marker{
+            content: '@';
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>입고 신고 쓰고 끼는 물건들~!</h2>
+    <ul>
+        <li>옷</li>
+        <li>신발</li>
+        <li>안경</li>
+        <li>장갑</li>
+    </ul>
+    <p class="ctxt">발이 편한 신발과 눈이 편한 안경은 필수입니다!</p>
+    <hr>
+    <!-- (.abox>p{11월의 여행지}+p{12월의 여행지}+ul>li*2)+p{내년의 여행지} -->
+    <div class="abox">
+        <p>11월의 여행지</p>
+        <p>12월의 여행지</p>
+        <ul>
+            <li><p>1주차 여행지</p></li>
+            <li><p>2주차 여행지</p></li>
+        </ul>
+    </div>
+    <p>내년의 여행지</p>
+</body>
+</html>

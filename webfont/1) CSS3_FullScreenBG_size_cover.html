@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3_FullScreenBG_size_cover.html 소스 코딩_CSS3 활용 FullScreen 배경 구현</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <!-- 1. CSS3 background-size 속성 사용 -->
+    <!-- 배경 이미지의 너비를 브라우저 화면 가득하게 표시하는 cover 값 활용함 -->
+    <style>
+        html{
+            /* 배경 이미지를 반복하지 않고(no-repeat) 화면 가운데 배치함 */
+            background: url('/images/mountain_downsizing.jpg') no-repeat center center fixed;
+            /* 배경 이미지 크기를 대상 요소(html, 즉 웹 문서)에 가득 차게 표시함 */
+            background-size: cover;
+        }
+        #content{ position: absolute;  top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Black Han Sans', sans-serif;
+        }
+        h1{ color: white; font-size: 8em;  font-style: italic;
+            text-shadow: 2px 2px 3px #222, 2px 2px 3px black;
+            text-transform: uppercase;
+        }
+    </style>
+    <!--[if lt IE9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- #content>h1{Sky &amp; Birds} -->
+    <div id="content">
+        <h1>Sky &amp; Birds</h1>
+    </div>
+</body>
+</html>

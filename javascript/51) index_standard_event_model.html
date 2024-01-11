@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표준 이벤트 모델 적용</title>
+    <script>
+        // 기본 이벤트 모델은 객체에 동일한 이벤트가 한번만 적용됩니다.
+        window.onload = function(){
+            var btLoad1 = document.getElementById('btLoad1');
+            btLoad1.onclick = function(){
+                console.log('ok1'); // 동일한 이벤트 ok1은 실행하지 않음
+            };
+        };
+        window.onload = function(){
+            var btLoad2 = document.getElementById('btLoad2');
+            btLoad2.onclick = function(){
+            console.log('ok2'); // 동일한 이벤트 ok2가 한번만 적용됨
+            };
+        } ;
+    </script>    
+</head>
+<body>
+    <button id="btLoad1">클릭</button>
+    <hr>
+    <button id="btLoad2">클릭</button>
+</body>
+</html>

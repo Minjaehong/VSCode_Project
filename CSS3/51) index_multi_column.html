@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_multi_column.html 소스 코딩</title>
+    <style>
+        div,h2,p{margin: 0; padding: 0;}
+        body{margin: 10px;}
+        h2{padding: 0 0 20px; text-align: center;}
+        .gmother{
+            text-align: justify;
+            padding: 20px;
+            background: #f5f3eb;
+            column-count: 3;
+            column-gap: 30px;
+            column-rule: 2px dashed chocolate;
+        }
+        /* 다단 안에 포함된 요소를 다단 편집에서 해제시켜줌. 여기서는 제목을 나타내는 h2 태그에 적용함 */
+        .gmother h2{column-span: all;}
+    </style>
+</head>
+<body>
+    <div class="gmother">
+        <h2>우리 형수님 <sup>발꿈치</sup> 땅에 닿기를...</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores a quod, expedita officia dolor magnam sunt, repellendus enim doloremque veritatis accusantium quia iusto similique libero perferendis voluptates possimus aliquid. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia dicta ex, omnis quae blanditiis expedita beatae facilis libero vero vitae voluptates, neque cupiditate atque dignissimos aliquid debitis suscipit porro. <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ullam ab dolorem, voluptatum repudiandae aliquam nam esse odio voluptas molestias culpa blanditiis consequuntur excepturi dignissimos debitis delectus impedit architecto iusto. <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat aliquam, totam facilis amet est id sint iusto ab exercitationem ullam harum consequuntur tempora esse a veniam quam eos modi optio?
+        </p>
+    </div>
+</body>
+</html>

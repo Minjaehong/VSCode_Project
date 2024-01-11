@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표준 이벤트 모델 적용</title>
+    <script>
+        // 앞서 '기본 이벤트 모델'은 객체(ex window)에 동일한 이벤트가 한번만 적용되는 반면 addEventListener 활용 '표쥰 이벤트 모델'은 여러 번 적용이 가능합니다. 
+                
+        function view1() {
+                console.log('btEvent1 ok!');
+        }
+        
+        function view2() {
+                console.log('btEvent2 ok!');
+        }
+        addEventListener('load',view1);
+        addEventListener('load',view2);
+    </script>
+</head>
+<body>
+    <button id="btEvent1">클릭</button>  
+    <hr>
+    <button id="btEvent2">클릭</button>  
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_z_index.html 소스 코딩</title>
+    <style>
+        img{position: absolute;}
+        #spade2{z-index: 1; left: 10px; top: 80px;}
+        #spade3{z-index: 3; left: 40px; top: 80px;}
+        #spade7{z-index: 5; left: 80px; top: 80px;}
+        #spadeA{z-index: 7; left: 120px; top: 80px;}
+    </style>
+</head>
+<body>
+    <h3>z-index 활용</h3>
+    <hr>
+    <div>
+        <img src="img/spade-A.png" alt="스페이드 A" id="spadeA" width="100px" height="100px">
+        <img src="img/spade-2.png" alt="스페이드 2" id="spade2" width="100px" height="100px">
+        <img src="img/spade-3.png" alt="스페이드 3" id="spade3" width="100px" height="100px">
+        <img src="img/spade-7.png" alt="스페이드 7" id="spade7" width="100px" height="100px">
+    </div>
+</body>
+</html>

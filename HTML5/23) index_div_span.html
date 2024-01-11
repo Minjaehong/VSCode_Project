@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_div_span.html 소스 코딩</title>
+    <style>
+        #wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        header{
+            font-weight: bold;
+            color: blueviolet;
+        }
+        .myfruit{
+            width: 300px;
+            border: 1px solid red;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .s1{
+            background-color: #ccc;
+        }
+        .s2{
+            color: #ff6600;
+        }
+        img{
+            display: block;
+        }
+        #underwrap{
+            width: 300px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- #wrap>header{헤더}+section{본문}+footer{푸터} -->
+    <div id="wrap">
+        <header>헤더</header>
+        <section>본문</section>
+        <footer>푸터</footer>
+    </div>
+    <!-- div>ul>li*3 -->
+    <div class="myfruit">
+        <ul>
+            <li>사과</li>
+            <li>배</li>
+            <li>포도</li>
+        </ul>
+    </div>
+    <hr>
+    <div id="underwrap">
+        <span class="s1">
+            <span class="s2">웹표준</span>과 <span class="s2">접근성</span>
+        </span>
+        <!-- div>a>(span>img)+span.s2{공기정화실물 화이트스타} -->
+        <div>
+            <a href="">
+                <span>
+                    <img src="images/whitestar.jpg" alt="하얀별 이미지">
+                </span>
+                <span class="s2">공기정화실물 화이트스타</span>
+            </a>
+        </div>
+    </div>
+</body>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prop() 메서드 활용</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- attr() 메서드가 html attribute(속성)에 관련된 메서드라면
+        prop() 메서드는 자바스크립트 property(프로퍼티 속성)에 관련된 메서드입니다.
+        prop() 메서드는 요소의 속성을 true, flase로 제어할 수 있습니다.-->
+    <script>
+        $(document).ready(function(){
+            console.log($("input:checkbox").eq(0).attr("checked"));
+            console.log($("input:checkbox").eq(0).prop("checked"));
+            console.log($("input:checkbox").eq(1).attr("checked"));
+            console.log($("input:checkbox").eq(1).prop("checked"));
+
+            $("input:checkbox").eq(0).attr("checked","checked");
+            $("input:checkbox").eq(1).prop("checked",true);
+            console.log($("input:checkbox").eq(0).attr("checked"));
+            console.log($("input:checkbox").eq(1).prop("checked"));
+        })
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="html"><label for="html">html</label>
+    <input type="checkbox" id="css"><label for="css">css</label>
+</body>
+</html>

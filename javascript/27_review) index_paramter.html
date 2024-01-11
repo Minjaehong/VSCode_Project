@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_paramter.html 소스 코딩</title>
+    <script>
+        // 선언적 함수 형식에서 매개변수(parameter) 활용 예시
+        // function getAvg(s1, s2, s3) {
+        //     var avg = (s1 + s2 + s3) / 3;
+        //     return avg;            
+        // }
+        // document.write(getAvg(90,82,94));
+
+        // 익명 함수 형식 처리
+        // var getAvg = function(s1,s2,s3){
+        //     var avg = (s1 + s2 + s3) / 3;
+        //     return avg; 
+        // }
+        // document.write(getAvg(80,84,96));
+
+        // 익명 함수 : 즉시 실행 함수 형식 처리
+        (function(s1,s2,s3){
+            var avg = (s1 + s2 + s3) / 3;
+            document.write(avg); 
+        })(90,80,100);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

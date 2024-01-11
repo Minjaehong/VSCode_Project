@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index dom style.html 소스 코딩</title>
+    <script>
+        function change() {
+            // id가 mySpan인 객체를 찾아서, 변수 span에 대입 처리함
+            var span = document.getElementById("mySpan");
+            // span 변수에 담긴 객체의 글자색을 green으로 적용함
+            span.style.color = 'green';
+            // span 변수에 담긴 객체의 글자크기를 30px로 적용함. 
+            // 이때, css style의 font-size속성 표현은
+            // javascript에서는 fontSize 카멜 표현으로 나타냄.
+            span.style.fontSize = '30px';
+            // span 변수에 담긴 객체의 display 속성을 block으로 설정함
+            span.style.display = 'block';
+            // span 변수에 담긴 객체의 width 폭 속성값을 6em(6배) 글자 크기로 적요함
+            span.style.width = '6em';
+            // span 변수에 담긴 객체의 border 경계선값 테두리를 3px dotteed magenta로 적용함
+            span.style.border = '3px dotted magenta';
+            // span 변수에 담긴 객체의 margin값을 상하좌우 여백 20px로 적용함
+            span.style.margin = '20px';
+        }
+    </script>
+</head>
+<body>
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr>
+    <p style="color: blue;">이것은
+        <span id="mySpan" style="color: red;">문장입니다.</span>
+    </p>
+    <input type="button" value="스타일 변경" onclick="change()">
+</body>
+</html>

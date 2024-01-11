@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_table_tr_td 소스 코딩</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th,td{
+            border: 1px solid #000;
+        }
+        .c1{
+            background: #ff0;
+        }
+        .c2{
+            background: #0ff;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col class="c1">
+            <col class="c2">
+        </colgroup>
+        <thead>
+            <tr>
+                <td>교과목</td>
+                <td>점수</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>93</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>92</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>평균</td>
+                <td>92.5</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

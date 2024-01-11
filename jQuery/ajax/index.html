@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_ajax.html 소스 코딩</title>
+    <style>
+        table{width: 100%; border-collapse: collapse;}
+        th, td{border: 1px solid #ccc; text-align: center;}
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            type:"GET",
+            url: "http://192.168.0.88/data1.json",
+            dataType:"json",
+            // 아래의 data 매개변수에는 data1.json의 전체 데이터가 들어갑니다.
+            success: function(data){
+                var elem = "";
+                console.log(data);
+                $.each(data, function(index, obj){
+                    elem += "<tr>";
+                        elem += "<th scope='row'>" + obj.name + "</th>";
+                        elem += "<td>" + obj.score1 + "</td>";    
+                        elem += "<td>" + obj.score2 + "</td>";    
+                        elem += "<td>" + obj.score3 + "</td>";    
+                        elem += "<td>" + obj.score4 + "</td>";    
+                    elem += "</tr>";
+                });
+                console.log(elem);
+                $("table tbody").append(elem);
+                
+            },
+            // XMLHttpRequest(XHR)은 AJAX 요청을 생성하는 JavaScript API입니다. XHR의 메서드로 브라우저와 서버간의 네트워크 요청을 전송할 수 있습니다.
+            error : function(xhr){
+                console.log(xhr.status + "/" + xhr.errorText);
+            }
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <caption>학생별 시험정수</caption>
+        <thead>
+            <tr>
+                <th scope="col">이름</th>
+                <th scope="col">html</th>
+                <th scope="col">css</th>
+                <th scope="col">javascript</th>
+                <th scope="col">jquery</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasClass() 메서드 활용</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            if($("#box").hasClass("m")){
+                console.log('m 클래스 있음')
+                
+            }else{
+                console.log('m 클래스 없음')
+            }
+            console.log($("#box").hasClass("m"));
+        })
+    </script>
+</head>
+<body>
+    <div id="box" class="m">내용</div>
+</body>
+</html>

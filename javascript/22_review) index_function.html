@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_function.html 소스 코딩</title>
+    <script>
+        // 아래와 가팅 선언적 함수 처리 시에는 '끌어 올리기' 호이스팅(Hoisting)을 허용합니다. 이때, 호이스팅은 변수, 함수 선언 이전에도 호출이 가능하도록 허용하는 것을 말합니다. 다만, 익명 함수나 let, const로 선언한 변수는 호이스팅을 허용하지 않습니다.
+        compute();
+        function compute() {
+            var x = 10;
+            var y = 100;
+            var result = x / y;
+            console.log(result);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

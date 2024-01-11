@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Plugin </title>
+<style>
+	*{margin: 0;padding: 0;}
+	body{font-size: 12px;}
+	input{vertical-align: middle;}
+	#notice_wrap{
+		width: 300px;
+		position: absolute;
+		left: 30px;
+		top: 30px;
+		box-shadow:0 0 8px #000;
+	}
+	.closeWrap{
+		background-color: #000;
+		color:#fff;
+		text-align: right;
+		padding:5px 10px;
+	}
+	.closeWrap button{
+		margin-left: 20px;
+		cursor:pointer;
+	}
+</style>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script>
+	// jquery-cookie 플러그인을 사용하면 간편하게 쿠키(cookie)를 생성하고
+	// 쿠키 만료일을 설정할 수 있습니다. 쿠키란 '사이트를 방문한 사용자의
+	// 소량(4kb이하) 브라우저 정보를 저장할 수 있는 공간'을 말합니다.
+	// 쿠키는 하나의 도메인당 최대 20개를 생성할 수 있고,
+	// 최대 4kb까지 저장할 수 있습니다.
+	$(function() {
+		// 쿠키("popup")의 값이 "none"이면
+		// id값이 "notice_wrap"인 요소를 숨김 처리 합니다.
+		if($.cookie('popup')=='none'){
+			$("#notice_wrap").hide();
+		}
+
+		// class값이 "closeBtn"인 요소를 클릭하면
+		// id가 expiresChk의 체크 유무에 따라
+		// 쿠키를 생성하여 3일간만 저장 처리 합니다.
+		var $expiresChk = $("#expiresChk");
+		// class closeBtn 영역을 클릭하면
+   		// jQuery on() 함수를 이용하여, closePop() 메서드를 호출합니다.
+		$(".closeBtn").on("click",closePop);
+		// closePop() 메서드에서는
+		// 만약에, 앞서 $expiresChk의 상태가 :checked(체크된 상태)라면
+		// cookie 설정 이름을 popup이라고 하고, expires 3일로 설정 처리를 합니다.
+		// 그리고, notice_wrap 아이디 영역을 fadeOut("빠르게") 처리 합니다.
+		function closePop(){
+			if($expiresChk.is(":checked")){
+				$.cookie("popup","none",{expires:3, path:"/"});
+			}
+			$('#notice_wrap').fadeOut();
+		}
+	});
+</script>
+</head>
+<body>
+	<div id="notice_wrap">
+		<img src="images/pic_1.jpg" alt="공지사항">
+		<p class="closeWrap">
+			<input type="checkbox" name="expiresChk" id="expiresChk">
+			<label for="expiresChk">3일 동안 이 창 열지않기</label>
+			<button class="closeBtn">닫기</button>
+	</p>
+	</div>  
+</body>
+</html>

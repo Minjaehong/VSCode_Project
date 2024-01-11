@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> Ajax </title>
+<style>
+  table, tr, td{border: 1px solid red; text-align: center; border-collapse: collapse;}
+  #title{font-weight: bold; font-size: 18px;}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+  // html 웹 사이트 가상 회원 데이터(xml)를 불러와서 바인딩 처리하는 예시입니다.
+$(function() {
+  $.ajax({
+    url : "http://192.168.0.88/dataset/dataset.xml",
+    dataType : "xml",
+    // success는 ajax 통신이 정상적으로 이루어지면, 익명함수로 data 매개변수에 데이터를 담아서
+    success : function(data){
+      // chrome 웹브라우저에 Console 탭에 매개변수 data 값을 표시해 줍니다.
+      console.log(data);
+      // 위에서 받은 data 매개변수에서 record 태그의 데이터들을 find() 메서드로 찾아서
+      // 좌측에 있는 $data 변수에 대입해 줍니다. 
+      var $data = $(data).find("record");
+      // 만약에(if문) $data.length 크기(갯수)가 0보다 크다면
+      if($data.length>0){
+        // table 태그를 좌측에 있는 변수 tb에 할당해서 생성해 줍니다.
+        var tb = $("<table />");
+        $.each($data,function(i,o){ // i는 index, o는 object
+          // 매개변수 o의 find("id") text 노드값을 var $id값에 대입 처리합니다.
+          var $id = $(o).find("id").text();
+          // 매개변수 o의 find("first_name") text 노드값을 var $first_name값에 대입 처리합니다.
+          var $first_name = $(o).find("first_name").text();
+          // 매개변수 o의 find("last_name") text 노드값을 var $last_name값에 대입 처리합니다.
+          var $last_name = $(o).find("last_name").text();
+          // 매개변수 o의 find("email") text 노드값을 var $email값에 대입 처리합니다.
+          var $email = $(o).find("email").text();
+          // 매개변수 o의 find("gender") text 노드값을 var $gender값에 대입 처리합니다.
+          var $gender = $(o).find("gender").text();
+
+          // console.log($id);
+          // console.log($firstName);
+          
+          // tr 태그를 생성하고, td 태그에 text() 메서드를 활용해서 text 노드에, 앞서 $id, $first_name, $last_name, $email, $gender 변수에 담겨진 데이터를 append() 메서드를 활용하여, 좌측에 row 변수에 붙여주고
+          var row = $("<tr />").append(
+              $("<td />").text($id), 
+              $("<td />").text($first_name),
+              $("<td />").text($last_name), 
+              $("<td />").text($email),
+              $("<td />").text($gender)             
+          )
+          // tb 변수에 append() 메서드 활용하여, row 변수 데이터를 추가해 줍니다.
+          tb.append(row);
+        });
+        // table 열 이름 삽입
+        var rowName = $("<tr />").append(
+          $("<td id='title'/>").text("No."),
+          $("<td id='title'/>").text("First Name"),
+          $("<td id='title'/>").text("Last Name"),
+          $("<td id='title'/>").text("E-mail"),
+          $("<td id='title'/>").text("Gender")
+        );
+        tb.prepend(rowName);
+        // 그리고, class wrap 영역에 append() 메서드로, 앞서 tb 변수에 담겨진 데이터를 추가해서 웹페이지 화면에 표시해줍니다.
+        $(".wrap").append(tb);
+      }
+    }
+  })
+});
+</script>
+</head>
+<body>
+  <div class="wrap"></div>
+</body>
+</html>

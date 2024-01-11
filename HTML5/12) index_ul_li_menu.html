@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_ul_li_menu.html 소스 코딩</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">메뉴1</a>
+            <!-- ul>(li>a)*3 -->
+            <ul>
+                <li><a href="#">메뉴1_1</a></li>
+                <li><a href="#">메뉴1_2</a></li>
+                <li><a href="#">메뉴1_3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴2</a>
+            <ul>
+                <li><a href="#">메뉴2_1</a></li>
+                <li><a href="#">메뉴2_2</a></li>
+                <li><a href="#">메뉴2_3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴3</a>
+            <ul>
+                <li><a href="#">메뉴3_1</a></li>
+                <li><a href="#">메뉴3_2</a></li>
+                <li><a href="#">메뉴3_3</a></li>
+            </ul>
+            
+        </li>
+    </ul>
+
+
+    <!-- ul>(li>(a{메뉴$}+ul>(li>a{메뉴_$})*3))*3 -->
+</body>
+</html>

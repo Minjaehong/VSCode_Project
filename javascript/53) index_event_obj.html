@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 속성</title>
+    <style>
+        div{
+            height: 100px;
+            background: #718c00;
+            margin-top: 20px;
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var bt = document.getElementById('bt');
+            var area = document.getElementById('area');
+            bt.onclick = function(event){
+                console.log(event.target); // 이벤트 발생 객체 반환
+                console.log(event.type); // 이벤트 이름                                                                                 반환
+                console.log(event.clientX); // 브라우저 기준 이벤트 발생 x좌표값 반환
+                console.log(event.clientY); // 브라우저 기준 이벤트 발생 y좌표값 반환
+                console.log(event.screenX); // 모니터 기준 이벤트 발생 x좌표값 반환
+                console.log(event.screenY); // 브라우저 기준 이벤트 발생 y좌표값 반환
+            };
+            // area 영역에 마우스 클릭 시, 왼클리(0), 가운데 휠클릭(1) ,우클릭(2) 버튼 값을 반환함
+            area.onmousedown = function(event){
+                console.log(event.button);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="bt">클릭</button>
+    <div id="area">여기에 마우스 왼쪽, 가운데, 오른쪽 버튼 클릭</div>
+</body>
+</html>

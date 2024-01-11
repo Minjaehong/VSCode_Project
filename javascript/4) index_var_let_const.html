@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_var_let_const.html 소스 코딩</title>
+    <script>
+        // [중요]
+        // 크롬 웹브라우저 F12 콘솔탭에서 
+        // 소스 코드 줄바꿈 단축키 
+        // Shift + Enter
+
+        // 자바스크립트 호이스팅
+        // hoisting(호이스팅) : 선언 전에 사용할 수 있도록 허용하는 방식
+        // (var 변수는 호이스팅 가능하지만, let 변수는 호이스팅을 허용하지 않습니다)
+        console.log(myname1);
+        var myname1;
+        myname1 = "hi";
+
+        console.log(myname2);
+        let myname2;
+        myname2 = "hi";
+
+        let myname3 = "hi";
+        console.log(myname3);
+
+        // console.log(myname4);
+        // const myname4;
+        // myname4 = "hi";
+
+        const myname5 = "hi";
+        console.log(myname5);
+
+        // 변수 중 var, let, const 3가지 차이점 서술
+        // var은 ES5에서 주로 사용한 변수 형식, 호이스팅을 허용
+        // let과 const는 ES6에서 사용하된 변수 형식, 호이스팅을 허용하지 않음
+        // let 가변 변수 선언 활용이 가능하며, const는 고정 변수 선언 활용이 가능
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

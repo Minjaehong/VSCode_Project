@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_box_shadow_resize.html 소스 코딩</title>
+    <style>
+        p{
+            display: inline-block;
+            margin: 20px 10px;
+            width: 300px;
+            padding: 20px;
+            border-radius: 55px 10px / 10px 55px;
+            background: #abcedf;
+        }
+        .shadow{
+            box-shadow: 8px 15px 10px inset rgba(0, 0, 50, 0.4);
+        }
+        textarea{border: 1px solid #000;}
+        .memo2{resize: none;}
+        div{
+            width: 300px;
+            padding: 30px;
+            border: 1px solid #000;
+            /* horizontal : 박스의 가로 방향 크기 조절만 가능 */
+            /* vertical : 박스의 세로 방향 크기 조절만 가능 */
+            /* both : 박스의 가로와 세로 방향 모두 조절 가능 */
+            resize: horizontal;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <p class="shadow">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <hr>
+    <textarea name="memo" id="memo" cols="70" rows="5" class="memo1"></textarea>
+    <textarea name="memo" id="memo" cols="70" rows="5" class="memo2"></textarea>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing.</div>
+</body>
+</html>

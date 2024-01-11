@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_attribute.html 소스 코딩</title>
+    <style>
+        /* h1[class]{
+            color: blue;
+            font-weight: bold;
+        } */
+        /* h1[class="saturday"] {
+            color: red;
+            font-weight: bold;
+        } */
+        /* "satur" 포함(공백으로 분리된 값이 일치해야함) */
+        /* h1[class~="satur"]{
+            color: red;
+            font-weight: bold;
+        } */
+        /* 정확하게 'satur'이거나 'satur-'으로 시작되는 요소 */
+        /* h1[class|="satur"]{
+            color:red;
+            font-weight: bold;
+        } */
+        /* "satur"로 시작 */
+        /* h1[class^="satur"]{
+            color:red;
+            font-weight: bold;
+        } */
+        /* class명에 철자 'satur'로 끝나는 h1 태그 */
+        /* h1[class$="satur"]{
+            color:red;
+            font-weight: bold;
+        } */
+        /* class명에 철자 'satur'가 포함되어 있는 h1 태그 */
+         /* h1[class*="satur"]{
+            color:red;
+            font-weight: bold;
+        } */
+    </style>
+</head>
+<body>
+    <!-- html 태그의 속성 유무 또는 속성값을 중괄호[]안에 넣어 선택자로 사용할 수 있습니다. -->
+    <h1>어제는 목요일입니다.</h1>
+    <h1 class="friday">오늘은 금요일입니다.</h1>
+    <h1 class="satur">내일은 첫번째 토요일입니다.</h1>
+    <h1 class="saturday">내일은 두번째 토요일입니다.</h1>
+    <h1 class="daysatur">내일은 세번째 토요일입니다.</h1>
+    <h1 class="I satur U">내일은 네번째 토요일입니다.</h1>
+</body>
+</html>

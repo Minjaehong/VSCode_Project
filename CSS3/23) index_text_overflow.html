@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_text_overflow.html 소스 코딩</title>
+    <style>
+        ul, li, h3{margin: 0; padding: 0;}
+        a{display: block; margin: 10px; text-decoration: none; color:darkblue}
+        .notice a h3{width: 200px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; border: 1px solid #000;}
+    </style>
+</head>
+<body>
+    <ul class="notice">
+        <li>
+            <a href="#">
+                <h3>시간 배분을 위하여 판단을 바랍니다.</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <h3>욕심껏 내용을 채우는 것도 좋겠습니다.</h3>
+            </a>
+        </li>
+        <li>   
+            <a href="#">
+                <h3>결과물을 볼 수 있어야 하는 것이 우선입니다.</h3>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

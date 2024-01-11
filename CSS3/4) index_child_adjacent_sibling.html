@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_child_adjacent_sibling.html 소스 코딩</title>
+    <style>
+        .abox > p{color:blue;}
+        h1 + h2{color:red;}
+        h1 ~ p{color: brown;}
+    </style>
+</head>
+<body>
+    <!-- 자식 선택자는 태그 내부에 있는 해당 요소를 가리키지만, 하위 태그의 하위 태그는 가리키지 않는 선택자입니다. '>' 문자로 표현합니다. -->
+    <!-- (.abox>p{11월의 여행지}+(ul>(li>p{$주차 여행지}))*2+p{12월의 여행지})+p{내년의 여행지} -->
+    <div class="abox">
+        <p>11월의 여행지</p>
+        <ul>
+            <li>
+                <p>1주차 여행지</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>2주차 여행지</p>
+            </li>
+        </ul>
+        <p>12월의 여행지</p>
+    </div>
+    <p>내년의 여행지</p>
+    <hr>
+    <!-- 인접 선택자는 현재 태그의 바로 다음에 나오는 요소만을 가리키는 선택자로 , 선택자 사이에 '+'로 구분합니다. -->
+    <!-- 형제 선택자는 현재 요소와 같은 계층에 있는 요소만들 선택할 수 있으며, '~(틸드)'로 구분합니다. -->
+    <h1>엑스포 안내</h1>
+    <h2>엑스포는 여수에서 합니다.</h2>
+    <p>책자를 배부하고 있습니다.</p>
+    <h2>엑스포는 여수에서 합니다.</h2>
+    <p>안내데스크를 활용하시기 바랍니다.</p>
+
+</body>
+</html>

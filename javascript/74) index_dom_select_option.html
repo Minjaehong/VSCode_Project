@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_dom_select_option.html 소스 코딩</title>
+    <!-- select 요소의 option 요소 추가 방법 -->
+    <!-- document.form요소.select요소.add(new Option("option 내용", "option 속성 값")) -->
+    <!-- document.form요소.select요소.length = option 요소의 개수 -->
+    <script>
+        window.onload = function(){
+            var frm = document.frm;
+            var date = new Date();
+            console.log(date);
+            var year = date.getFullYear();
+            for(let i = 1970; i <= year; i++){
+                frm.y.add(new Option(i,i));
+            };
+            for(let i =1; i<=12;i++){
+                frm.m.add(new Option(i,i));
+            }
+            frm.sub.length = 5;
+        };
+    </script>
+</head>
+<body>
+    <form action="#" name="frm">
+        <select name="y">
+            <option value="#">년도 선택</option>
+        </select>
+        <select name="m">
+            <option value="#">월 선택</option>
+        </select>
+        <select name="sub">
+            <option value="#">과목 선택</option>
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="javascript">javascript</option>
+            <option value="react">react</option>
+        </select>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

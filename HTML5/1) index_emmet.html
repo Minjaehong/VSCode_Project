@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내가 만드는 첫번째 웹페이지</title>
+
+    <style>
+
+      #one{
+        font-size: 10px;
+        color: aqua;
+        background-color: #ff0000;
+      }
+
+    </style>
+
+    <!-- 행삭제 단축키 : ctrl + shift + k -->
+
+    <!-- 행 잘라내기 : ctrl + x -->
+    <div id="today"></div>
+    <!-- 행 복사하기 : ctrl + C -->
+    <div id="test"></div>
+    <!-- 행 붙여넣기 : ctrl + V-->
+    <div id="nice"></div>
+    <!-- 사이드바 숨기기/나타내기 : Ctrl + B -->
+    <!-- 선택 라인으로 이동하기 : Ctrl + G -->
+    <!-- 콘솔창 나타내기 : ctrl + ` (키보드 숫자 1의 왼쪽에 있는 백틱키) -->
+  </head>
+<body>
+  <!-- p#one -->
+  <p id="one">오늘은 좋은날!</p> 
+  
+  <!-- p#two{지금은 7교시} -->
+  <p id="two">지금은 7교시</p>
+
+  <!-- p.one{오늘은 개강일!} -->
+  <p class="one">오늘은 개강일!</p>
+
+  <!-- p.two{지금은 오후 4시 47분} -->
+  <p class="two">지금은 오후 4시 47분</p>
+
+  <!-- ul>li*3  *n list를 n개로 늘려줌-->
+  <ul>
+    <li>사과</li>
+    <li>포도</li>
+    <li>수박</li>
+  </ul>
+
+  <!-- div>ul>li*3 -->
+  <div>
+    <ul>
+      <li>한국</li>
+      <li>미국</li>
+      <li>중국</li>
+    </ul>
+  </div>
+
+  <!-- div>ul+ol -->
+  <div>
+    <ul>현대</ul>
+    <ol>기아</ol>
+  </div>
+  
+  <!-- div>((ul>li*3)+(ol>li*3)) -->
+  <div>
+    <ul>
+      <li>강아지</li>
+      <li>고양이</li>
+      <li>고슴도치</li>
+    </ul>
+    <ol>
+      <li>광어</li>
+      <li>우럭</li>
+      <li>전복</li>
+    </ol>
+  </div>
+
+  <!-- div>(header>ul>li*3) -->
+  <div>
+    <header>
+      <ul>
+        <li>바다</li>
+        <li>산</li>
+        <li>언덕</li>
+      </ul>
+    </header>
+  </div>    
+
+  <!-- div>p{Hello~ Jangnara!} -->
+  <div>
+    <p>Hello~ Jangnara!</p>
+  </div>
+
+  <!-- p.test$*3 $*3 자동완성 -->
+  <p class="test1">새우깡</p>
+  <p class="test2">감자깡</p>
+  <p class="test3">빼빼로</p>
+
+  <!-- p.test${item $}*3 -->
+  <p class="test1">item 1</p>
+  <p class="test2">item 2</p>
+  <p class="test3">item 3</p>
+
+  <!-- 더미 텍스트(테스트용 데이터) -->
+  <!-- p>lorem -->
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore totam quasi a in earum maiores odio sed? Fugiat minima molestiae ducimus vero quia maiores neque beatae nulla tempore dolore.</p>
+  <!-- p>lorem4  lorem+숫자 : 입력한 숫자 단어만 출력-->
+  <p>Lorem ipsum dolor sit.</p>
+
+  <!-- link[rel="shortcut icon" href="images/favicon.ico"] -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+
+
+</body>
+</html>

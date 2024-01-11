@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z_index_review.html 소스 코딩</title>
+    <style>
+        .box{width: 450px; background: orange; position: relative;}
+        p{ width: 250px; height: 100px;
+            padding: 10px; font-weight: bold; }
+        .red{background-color: crimson; position: absolute; z-index: 10;}
+        .green{background-color: lime; position: absolute; left:70px; top: 50px; z-index: 6;}
+        .blue{background-color: dodgerblue; position: absolute; left: 100px; top: 30px; z-index: 8;}
+    </style>
+</head>
+<body>
+    <!-- .box>p*3 -->
+    <div class="box">
+        <p class="red">첫번째 박스</p>
+        <p class="green">두번째 박스</p>
+        <p class="blue">세번째 박스</p>
+    </div>
+</body>
+</html>
