@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>남율건설</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/vegas.min.css">
     <script src="javascript/jquery-1.12.3.js"></script>
     <!-- defer 속성은 script가 잠깐 지연 되도록 하여
       HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
@@ -61,7 +62,7 @@
     <div class="bodywrap">
         <div class="imgslide">
             <!-- (a>(img+span.imgtext))*3 -->
-            <a href="#">
+            <!-- <a href="#">
                 <img src="images/img1.jpg" alt="슬라이드 이미지 1">
                 <span class="imgtext">모델하우스 VR 체험</span>
             </a>
@@ -72,7 +73,7 @@
             <a href="#">
                 <img src="images/img3.jpg" alt="슬라이드 이미지 3">
                 <span class="imgtext">남율건설 인재 채용</span>
-            </a>
+            </a> -->
         </div>
         <div class="contents">
             <div class="notice">
@@ -186,6 +187,30 @@
                 alt="올바른 CSS입니다!" />
         </a>
     </p>
-          
+        
+    <script src="javascript/vegas.min.js"></script>
+    <script>
+        $(function(){
+            $('.imgslide').vegas({
+                slides: [
+                    // 초반 이미지를 나타나게 합니다. 주석처리 하시면 이미지는 나타나지 않습니다.
+                    {   src: 'videos/sea.jpg' },
+                    {   
+                        //video{} 안에 배경 동영상과 옵션값을 지정할 수 있습니다.
+                        video: {
+                            // src 속성을 사용해서 동영상을 지정해 줄 수 있습니다.
+                            src: [
+                                'videos/sea.mp4'
+                            ],
+                            // loop 속성을 사용해서 동영상 반복 재생 여부를 지정합니다.
+                            loop: true,
+                            // 동영상을 무음 상태(음소거 상태)로 만들어 줍니다.
+                            mute: true
+                        }
+                    }
+                ]
+            });
+        })
+    </script>
 </body>
 </html>
