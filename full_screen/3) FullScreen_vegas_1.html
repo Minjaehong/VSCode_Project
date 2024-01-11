@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Vegas 활용 첫번째 예시</title>
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <link rel="stylesheet" href="css/vg.css">    
+</head>
+<body>
+    <div id="content">
+        <h1>FullScreen Background Image</h1>
+        <p>
+            <strong>
+                <a href="http://vegas.jaysalvat.com">
+                    Vegas.js
+                </a>
+            </strong>
+            플러그인을 이용한 <br>
+            풀스크린 배경 이미지 구현!
+        </p>
+    </div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script>
+        $(function(){
+            $('body').vegas({
+                delay: 3500, // 슬라이드 간 전환 속도를 3500밀리초(3.5초)로 설정합니다.
+                slides: [
+                    { src: 'images/nature-1.jpg' },
+                    { src: 'images/nature-2.jpg' },
+                    { src: 'images/nature-3.jpg' }
+                ]
+            });
+        })
+    </script>
+</body>
+</html>
