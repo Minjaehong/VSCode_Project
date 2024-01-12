@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax.html 소스 코딩: AOS와 parallax 구현 예시</title>
+    <!-- https://michalsnik.github.io/aos/ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="content" id="flower1">
+        <h1>Flower1</h1>
+        <div>
+            <h2>Flower1</h2>
+            <p data-aos="flip-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cumque ad odit distinctio excepturi suscipit libero corrupti labore facilis, quasi iure nam ipsam quam reiciendis asperiores quibusdam quis repellendus amet.</p>
+        </div>
+    </div>
+    <div class="content" id="flower2">
+        <h1>Flower2</h1>
+        <div>
+            <h2>Flower2</h2>
+            <p data-aos="flip-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cumque ad odit distinctio excepturi suscipit libero corrupti labore facilis, quasi iure nam ipsam quam reiciendis asperiores quibusdam quis repellendus amet.</p>
+        </div>
+    </div>
+    <div class="content" id="flower3">
+        <h1>Flower3</h1>
+        <div>
+            <h2>Flower3</h2>
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cumque ad odit distinctio excepturi suscipit libero corrupti labore facilis, quasi iure nam ipsam quam reiciendis asperiores quibusdam quis repellendus amet.</p>
+        </div>
+    </div>
+    <div class="content" id="flower4">
+        <h1>Flower4</h1>
+        <div>
+            <h2>Flower4</h2>
+            <p data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cumque ad odit distinctio excepturi suscipit libero corrupti labore facilis, quasi iure nam ipsam quam reiciendis asperiores quibusdam quis repellendus amet.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+           // offset(오프셋) 이란?
+           // 배열이나 자료구조 오브젝트 내의 오프셋(offset)은 일반적으로 동일 프로젝트 안에서
+           // 오브젝트 처음부터 주어진 요소나 지점까지의 변위차(편차, 차이, 위치)를 나타내는 정수형입니다.
+           // 이를테면, 문자 A의 배열이 'abcdef'를 포함한다면
+           // 'c' 문자는 A 시작점에서 2의 오프셋을 지닌다고 할 수 있습니다.
+           // 여기서는 120px의 위치에서 AOS를 초기화 시작 적용함을 의미합니다.
+            offset:20,
+           // once 속성 활성화(true)는 AOS를 한번만 적용함을 의미합니다.
+            // once:true
+        });
+        </script>
+</body>
+</html>
