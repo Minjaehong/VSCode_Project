@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullScreen video 활용 구현</title>
+    <style>
+        body{
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        h1{
+            font-size: 3em;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+        }
+        a{
+            font-size: 2em;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+        }
+        .wrapper{
+            text-align: center;
+            margin-top: 300px;
+        }
+    </style>
+    <!-- 구버전(IE9 미만) 인터넷 익스플로러에서 HTML5 태그를 지원하기 위한 조건부 주석 -->
+    <!--[if lt IE9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 컨트롤이 가능하며 자동으로 재생되고 음소거, 무한 반복되는 비디오 동영상 설정 -->
+    <video controls autoplay muted loop>
+        <!-- 비디오 동영상 파일 경로 및 유형 설정 -->
+        <source src="videos/boat_c.mp4" type="video/mp4">
+    </video>
+    <div class="wrapper">
+        <h1>Full Screen Video</h1>
+        <!-- KBS 웹사이트로 연결되는 링크 설정. 이때, 새 탭에서 열리게 함-->
+        <a href="http://www.kbs.co.kr" target="_blank">☞ 바로가기 : KBS 한국방송공사</a>
+    </div>
+
+</body>
+</html>

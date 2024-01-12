@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullScreen_image_img_tag.html : img 태그에 css 활용 FullScreen 배경 구현</title>
+    <!-- IE9 이하 버전에서 video 태그와 같은 HTML5 태그의 호환성
+        문제 해결을 위해 아래와 같이 조건부 주석문 3줄 소스 코딩 적용함 -->
+    <!--[if lt IE9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        @font-face {
+        font-family: 'GmarketSansTTFBold';
+        src: url('fonts/GmarketSansTTFBold.ttf');
+        }   
+
+        .bg{
+            min-height: 100%;
+            min-width: 1024px;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        #content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        h1{
+            color: white;
+            font-size: 8em;
+            font-style: italic;
+            text-shadow: 2px 2px 3px #222, 2px 2px 3px black;
+            text-transform: uppercase;
+            font-family: 'GmarketSansTTFBold';
+        }
+    </style>
+</head>
+<body>
+    <img src="images/mountain_downsizing.jpg" alt="배경 이미지" class="bg">
+    <div id="content">
+        <h1>Sky &amp; Birds</h1>
+    </div>
+</body>
+</html>
