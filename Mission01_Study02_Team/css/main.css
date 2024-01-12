@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+*{
+    background-color: transparent !important;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html{
+    /* 배경 이미지를 반복하지 않고 화면 가운데 배치 적용함 */
+    background: url(../resources/images/main_bg.jpg) no-repeat center center fixed;
+    /* 배경 이미지 크기를 대상 요소(html, 웹 문서)에 가득 차게 표시함 */
+    background-size: cover;
+}
+
+.logo_img img{
+    width: 100%;
+    padding: 10px;
+}
+
+a > h2{
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+    font-family: 'GmarketSansMedium';
+}
+a > h2 > span{
+    font-size: 0.7em !important;
+    color: #333;
+}
+a > p{
+    font-size: 1.2em;
+    word-break: keep-all;
+    font-family: 'GmarketSansMedium';
+    color: #333;
+}
+.about_company{  
+    opacity: 0.7;
+    display: block;
+    text-decoration: none !important;
+    color:#333;
+    text-align: center;
+}
+.about_company:hover{
+    opacity: 1;
+    text-decoration: none;
+}
