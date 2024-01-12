@@ -26,8 +26,27 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
     <script>
+        // https://bxslider.com/install
     $(document).ready(function(){
-        $(".bxslider").bxSlider();
+        $(".bxslider").bxSlider({
+            // 자동 실행 설정(true : 활성화)
+            auto: true,
+            // 컨트롤 버튼(재생/정지) 표시
+            autoControls: true,
+            // 클릭해서 자동 실행 멈출 수 있도록 지정
+            stopAutoOnClick: true,
+            // 슬라이드 전환 지속 시간(다음 슬라이드로 전환되는 과정에서의 사이 시간)
+            // 2000ms = 2s(2초)
+            speed: 2000,
+            // 다음 전환까지 멈춰있는 시간(다음 슬라이드로 전환되기 전에 잠깐 멈춤 시간)
+            // 3000ms = 3s(3초)
+            pause: 3000,
+            // 페이지 표시 보여짐
+            // pager Default 기본값 (pager:false 페이지 표시 안함)
+            pager: true,
+            // 스크린에 맞춘 반응형 슬라이드 폭 설정
+            slideWidth: 600
+        });
     });
     </script>
 </body>
