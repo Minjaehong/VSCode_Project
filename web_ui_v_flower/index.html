@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연꽃마을축제</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <!-- defer 속성은 script가 잠깐 지연 되도록 하여 HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+    <!-- Vegas css 추가 -->
+    <link rel="stylesheet" href="../full_screen/css/vegas.min.css">
+
+</head>
+<body>
+    <!-- header>div.top>div.logo{로고자리}+nav.menu{메뉴자리} -->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="#"><img src="images/logo.jpg" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <!-- ul.navi>(li>a{축제소개}+(ul.submenu>(li>a)*4))+(li>a{행사안내}+(ul.submenu>(li>a)*3))+(li>a{홍보마당}+(ul.submenu>(li>a)*3))+(li>a{참여마당}+(ul.submenu>(li>a)*2)) -->
+                <ul class="navi">
+                    <li>
+                        <a href="#">축제소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">초대말씀</a></li>
+                            <li><a href="#">축제개요</a></li>
+                            <li><a href="#">축제연혁</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">행사안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">셔틀버스안내</a></li>
+                            <li><a href="#">행사안내</a></li>
+                            <li><a href="#">행사일정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">홍보마당</a>
+                        <ul class="submenu">
+                            <li><a href="#">축제소식</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">음식레시피</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">참여마당</a>
+                        <ul class="submenu">
+                            <li><a href="#">참가후기</a></li>
+                            <li><a href="#">포토갤러리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- .imgslide{이미지 슬라이드 자리} -->
+    <div class="imgslide">
+        <!-- (a>img+span.imgtext{연꽃마을축제$})*3 -->
+        <!-- <a href="#">
+            <img src="images/img1.jpg" alt="이미지1">
+            <span class="imgtext">연꽃마을축제1</span>
+        </a>
+        <a href="#">
+            <img src="images/img2.jpg" alt="이미지2">
+            <span class="imgtext">연꽃마을축제2</span>
+        </a>
+        <a href="#">
+            <img src="images/img3.jpg" alt="이미지3">
+            <span class="imgtext">연꽃마을축제3</span>
+        </a> -->
+    </div>
+
+    <!-- .contents>.notice{공지사항자리}+.gallery{갤러리 자리}+.shortcut{바로가기 자리} -->
+        <div class="contents">
+            <div class="notice">
+                <!-- (.tab>h4{공지사항})+(ul>(li>a>span)*4) -->
+                <div class="tab">
+                    <h4>공지사항</h4>
+                </div>
+                    <ul>
+                        <li><a href="#">연꽃과 음식 이야기
+                            <span>2024.01.01</span></a>
+                        </li>
+                        <li><a href="#">연꽃마을축제에서 즐기는 풍경
+                            <span>2024.01.02</span></a>
+                        </li>
+                        <li><a href="#">연꽃으로 장식품 만들기
+                            <span>2024.01.03</span></a>
+                        </li>
+                        <li><a href="#">건강에 좋은 음식
+                            <span>2024.01.04</span></a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="gallery">
+            <!-- (.tab>h4{갤러리})+(ul>(li>a>img)*3) -->
+                <div class="tab">
+                    <h4>갤러리</h4>
+                </div>
+                <ul>
+                    <li><a href="#"><img src="images/icon1.jpg" alt="갤러리 이미지 1"></a></li>
+                    <li><a href="#"><img src="images/icon2.jpg" alt="갤러리 이미지 2"></a></li>
+                    <li><a href="#"><img src="images/icon3.jpg" alt="갤러리 이미지 3"></a></li>
+                </ul>
+            </div>
+            <div class="shortcut">
+                <!-- a>img+(span.sctext{바로가기}) -->
+                <a href="#">
+                    <img src="images/contents.jpg" alt="바로가기 이미지">
+                    <span class="sctext">바로가기</span>
+                </a>
+            </div>
+        </div>    
+
+        <!-- #modal>.modal_up>(.uptitle{공지 사항})+(.upbody{연꽃과 음식 이야기 관련 책자는 안내 사무실에서 받아가세요.})+(.btn{닫기}) -->
+        <div id="modal">
+            <div class="modal_up">
+                <div class="uptitle">공지 사항</div>
+                <div class="upbody">연꽃과 음식 이야기 관련 책자는 안내 사무실에서 받아가세요.</div>
+                <div class="btn">닫기</div>
+            </div>
+        </div>
+
+    <!-- footer>.bottom>.copy{copyright자리}+.site>.sns{sns자리}+.familysite{패밀리 사이트 자리} -->
+    <footer>
+        <div class="bottom">
+            <div class="copy">
+                <!-- COPYRIGHT © by WEBDESIGN. ALL RIGHTS RESERVED -->
+                COPYRIGHT &#169; by WEBDESIGN. ALL RIGHTS RESERVED
+            </div>
+            <div class="site">
+                <div class="sns">
+                    <!-- ul>(li>a>img)*3 -->
+                    <ul>
+                        <li><a href="#"><img src="images/sns1.jpg" alt="sns이미지1"></a></li>
+                        <li><a href="#"><img src="images/sns2.jpg" alt="sns이미지2"></a></li>
+                        <li><a href="#"><img src="images/sns3.jpg" alt="sns이미지3"></a></li>
+                    </ul>                    
+                </div>
+                <div class="familysite">
+                    <!-- select>(option{패밀리사이트$}*3) -->
+                    <select name="sitelist" id="sitelist">
+                        <option value="#">패밀리사이트1</option>
+                        <option value="#">패밀리사이트2</option>
+                        <option value="#">패밀리사이트3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <p>
+        <a href="http://validator.kldp.org/check?uri=referer"
+          onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+          src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+    </p>
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="올바른 CSS입니다!" />
+            </a>
+    </p>
+
+
+    <!-- Backstrech로 이미지 슬라이드 구현 -->
+    <!-- <script src="../full_screen/js/jquery-2.2.4.min.js"></script>
+    <script src="../full_screen/js/jquery.backstretch.min.js"></script>
+    <script>
+        $(function(){
+            $('.imgslide').backstretch([
+                "images/img1.jpg"
+                , "images/img2.jpg"
+                , "images/img3.jpg"
+            ], {duration: 1500, fade: 750});
+        });
+    </script> -->
+
+    <!-- Vegas로 이미지 슬라이드 구현 -->
+    <script src="../full_screen/js/jquery-2.2.4.min.js"></script>
+    <script src="../full_screen/js/vegas.min.js"></script>
+    <script>
+        $(function(){
+            $('.imgslide').vegas({
+                delay: 1500, // 슬라이드 간 전환 속도를 1500밀리초(1.5초)로 설정합니다.
+                slides: [
+                    { src: 'images/img1.jpg' },
+                    { src: 'images/img2.jpg' },
+                    { src: 'images/img3.jpg' }
+                ]
+            });
+        })
+    </script>
+</body>
+</html>
