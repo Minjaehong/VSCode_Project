@@ -10,6 +10,9 @@
      HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함-->
     <script src="javascript/script.js" defer type="text/javascript"></script>
     <script src="javascript/jquery.backstretch.min.js"></script>
+
+    <!-- vegas css 삽입 -->
+    <link rel="stylesheet" href="css/vegas.min.css">
 </head>
 <body>
     <!-- header>.top>(.logo{로고 자리})+(nav.menu{메뉴 자리}) -->
@@ -164,16 +167,43 @@
 
     <p>
         <a href="http://validator.kldp.org/check?uri=referer"
-          onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
-          src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
-      </p>
-      <p>
+            onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+            src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80"></a>
+        </p>
+        <p>
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
             <img style="border:0;width:88px;height:31px"
                 src="http://jigsaw.w3.org/css-validator/images/vcss"
                 alt="올바른 CSS입니다!" />
         </a>
     </p>
-   
+
+    <!-- vegas 이용 동영상 슬라이드 -->
+    <script src="javascript/jquery-2.2.4.min.js"></script>
+    <script src="javascript/vegas.min.js"></script>
+    <script>
+        $(function(){
+            $('.imgslide').vegas({
+                slides: [
+                    // 초반 이미지를 나타나게 합니다. 주석처리 하시면 이미지는 나타나지 않습니다.
+                    {   src: 'videos/stream.jpg' },
+                    {   
+                        //video{} 안에 배경 동영상과 옵션값을 지정할 수 있습니다.
+                        video: {
+                            // src 속성을 사용해서 동영상을 지정해 줄 수 있습니다.
+                            src: [
+                                'videos/stream.mp4'
+                            ],
+                            // loop 속성을 사용해서 동영상 반복 재생 여부를 지정합니다.
+                            loop: true,
+                            // 동영상을 무음 상태(음소거 상태)로 만들어 줍니다.
+                            mute: true
+                        }
+                    }
+                ]
+            });
+        })
+    </script>
+
 </body>
 </html>
