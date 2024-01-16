@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찾아오시는 길</title>
+
+    <!-- https://michalsnik.github.io/aos/ -->
+    <!-- https://github.com/michalsnik/aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- 찾아오시는 길 CSS 적용(location.css)-->
+    <link rel="stylesheet" href="css/location.css" > 
+    <style>
+        html, body {width:100%;height:100%;margin:0;padding:0;} 
+        .map_wrap {position:relative;overflow:hidden;width:50%;height:350px; margin: 0 auto;}
+        .radius_border{border:1px solid #919191;border-radius:5px;}     
+        .custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+        .custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+        .custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}       
+        .custom_typecontrol .btn:hover {background:#f5f5f5;background:linear-gradient(#f5f5f5,#e3e3e3);}
+        .custom_typecontrol .btn:active {background:#e6e6e6;background:linear-gradient(#e6e6e6, #fff);}    
+        .custom_typecontrol .selected_btn {color:#fff;background:#425470;background:linear-gradient(#425470, #5b6d8a);}
+        .custom_typecontrol .selected_btn:hover {color:#fff;}   
+        .custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#f5f5f5;} 
+        .custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
+        .custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
+        .custom_zoomcontrol span:first-child{border-bottom:1px solid #bfbfbf;}            
+    </style>  
+
+</head>
+<body>
+        <h1 class="location_title">방송통신위원회</h1>
+        <div class="location_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed minima, ratione iste voluptatem aut obcaecati reiciendis nesciunt delectus ex aliquid eaque atque quod laudantium aperiam illo eos consequatur, nobis pariatur.</div>
+        <div class="location_title" data-aos="fade" data-aos-duration="2500">찾아오시는길 (약도)</div>
+        <div class="map_img" data-aos="fade" data-aos-duration="2500"><img src="locationImg/location_image.jpg"></div>
+
+        <div class="location_title" data-aos="fade" data-aos-duration="2500">찾아오시는길 (Kakao Map)</div>
+        <div class="map_wrap" data-aos="fade" data-aos-duration="2500" >
+            <div id="map" style="width:100%;height:500px; margin:10px auto">            
+            </div>
+            <!-- 지도타입 컨트롤 div 입니다 -->
+            <div class="custom_typecontrol radius_border">
+                <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+                <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+            </div>
+            <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+            <div class="custom_zoomcontrol radius_border"> 
+                <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>  
+                <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+            </div>
+        </div>
+
+        <div class="location_common">
+            <div class="location_information" data-aos="fade" data-aos-duration="2500">
+                <h2>LOCATION INFORMATION</h2>
+                <h2><small>방송통신위원회 정보</small></h2><br><br>
+                <h3>주소</h3>
+                <!-- h3>small -->
+                <h3><small>(13809)경기도 과천시 관문로 47, 2동</small></h3>
+                <h3>대표전화번호</h3>                
+                <h3><small>02-1234-5678</small></h3>
+                <h3>과천청사관리소</h3>                
+                <h3><small>02-1234-7979</small></h3>
+            </div>
+            <div class="location_information_add" data-aos="fade" data-aos-duration="2500">
+                <!-- 교통(traffic) 정보 추가 -->
+                <div class="location_traffic">
+                    <div class="traffic_details">
+                        <img src="locationImg/location_bus_icon.svg" alt="버스 아이콘">
+                        <h2>버스</h2>
+                    </div>
+                    <h2><small>방송통신위원회 정류장 하차 <br> <br> 일반 지선(녹색) 버스 : 1-1, 9, 9-3, 11-1, 11-2, 11-3, 11-5, 103, 777, 917</small></h2>
+                </div>
+                <div class="location_traffic">
+                    <div class="traffic_details">
+                        <img src="locationImg/location_subway_icon.svg" alt="지하철 아이콘">
+                        <h2>지하철</h2>
+                    </div>
+                    <h2><small>4호선 정부과천청사 하차 <br> <br> 7번 또는 8번 출구로 나와서 150m 직진 지점</small></h2>
+                </div>
+                <div class="location_traffic">
+                    <div class="traffic_details">
+                        <img src="locationImg/location_navigation_icon.svg" alt="네비게이션 아이콘">
+                        <h2>네비게이션(Navigation)</h2>
+                    </div>
+                    <h2><small>아이나비 네비, 구글 네비 등 네비게이션 "방송통신위원회" 검색</small></h2>
+                </div>
+                <div class="location_traffic">
+                    <div class="traffic_details">
+                        <img src="locationImg/location_parking_icon.svg" alt="주차 아이콘">
+                        <h2>주차안내</h2>
+                    </div>
+                    <h2><small>방송통신위원회 고객안내센터 1층 주차장 이용</small></h2>
+                </div>
+            </div>
+        </div>
+        
+    <script>
+        AOS.init();
+    </script>    
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ddb8e20a6cf39a866845813bb85cda68"></script>
+    <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.555252, 126.936833), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };  
+    
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(37.555252, 126.936833); 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });    
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    var iwContent = '<div style="padding:5px; text-align:center; width:100%">2호선 신촌역</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    iwPosition = new kakao.maps.LatLng(37.555252, 126.936833); //인포윈도우 표시 위치입니다
+    
+    // 지도타입 컨트롤의 지도 또는 스카이뷰 버튼을 클릭하면 호출되어 지도타입을 바꾸는 함수입니다
+    function setMapType(maptype) { 
+        var roadmapControl = document.getElementById('btnRoadmap');
+        var skyviewControl = document.getElementById('btnSkyview'); 
+        if (maptype === 'roadmap') {
+            map.setMapTypeId(kakao.maps.MapTypeId.ROADMAP);    
+            roadmapControl.className = 'selected_btn';
+            skyviewControl.className = 'btn';
+        } else {
+            map.setMapTypeId(kakao.maps.MapTypeId.HYBRID);    
+            skyviewControl.className = 'selected_btn';
+            roadmapControl.className = 'btn';
+        }
+    }
+    
+    // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+    function zoomIn() {
+        map.setLevel(map.getLevel() - 1);
+    }
+    
+    // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+    function zoomOut() {
+        map.setLevel(map.getLevel() + 1);
+    }
+
+    // window 객체 활용 map 안에 마커 중앙 표시 : resize 처리(추가 코딩)
+    window.addEventListener('resize', function(){
+        map.setCenter(new kakao.maps.LatLng(37.555184166, 126.936910322))
+    });
+
+    </script> 
+</body>
+</html>
