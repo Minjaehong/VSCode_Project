@@ -360,6 +360,7 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+  word-break: keep-all;
 }
 
 .section-title h2 {
@@ -1125,7 +1126,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact button[type=submit] {
+.contact button[type=button] {
   background: #0563bb;
   border: 0;
   padding: 10px 35px;
@@ -1134,7 +1135,7 @@ section {
   border-radius: 50px;
 }
 
-.contact button[type=submit]:hover {
+.contact button[type=button]:hover {
   background: #0678e3;
 }
 
