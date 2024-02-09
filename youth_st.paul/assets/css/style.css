@@ -1125,7 +1125,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact button[type=button] {
+.contact button[type=submit] {
   background: #0563bb;
   border: 0;
   padding: 10px 35px;
@@ -1134,7 +1134,7 @@ section {
   border-radius: 50px;
 }
 
-.contact button[type=button]:hover {
+.contact button[type=submit]:hover {
   background: #0678e3;
 }
 
