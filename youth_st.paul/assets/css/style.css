@@ -818,6 +818,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  word-break: keep-all;
 }
 
 .portfolio-details .portfolio-details-slider img {
