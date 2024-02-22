@@ -88,6 +88,34 @@
     onscroll(document, toggleBacktotop)
   }
 
+  let apply = select('.apply')
+  if (apply) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        apply.classList.add('active')
+      } else {
+        apply.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+  }
+
+  let instagramBtn = select('.instagramBtn')
+  if (instagramBtn) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        instagramBtn.classList.add('active')
+      } else {
+        instagramBtn.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+  }
+
+
+
   /**
    * Mobile nav toggle
    */

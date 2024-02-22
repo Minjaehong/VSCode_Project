@@ -67,6 +67,75 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# apply button
+--------------------------------------------------------------*/
+.apply {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 65px;
+  z-index: 996;
+  background: #0563bb;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.apply i {
+  font-size: 20px;
+  color: #fff;
+  line-height: 0;
+}
+
+.apply:hover {
+  background: #0678e3;
+  color: #fff;
+}
+
+.apply.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# instagram button
+--------------------------------------------------------------*/
+.instagramBtn {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 115px;
+  z-index: 996;
+  background: #0563bb;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.instagramBtn i {
+  font-size: 30px;
+  color: #fff;
+  line-height: 20px;
+}
+
+.instagramBtn:hover {
+  background: #0678e3;
+  color: #fff;
+}
+
+.instagramBtn.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+/*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
@@ -349,6 +418,20 @@ h6 {
   }
 }
 
+#hero button[type=button] {
+  background: #0563bb;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+#hero button[type=button]:hover {
+  background: #0678e3;
+}
+
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -360,6 +443,7 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 30px;
+  word-break: keep-all;
 }
 
 .section-title h2 {
@@ -1125,7 +1209,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact button[type=submit] {
+.contact button[type=button] {
   background: #0563bb;
   border: 0;
   padding: 10px 35px;
@@ -1134,7 +1218,7 @@ section {
   border-radius: 50px;
 }
 
-.contact button[type=submit]:hover {
+.contact button[type=button]:hover {
   background: #0678e3;
 }
 
