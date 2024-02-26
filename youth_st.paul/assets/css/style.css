@@ -9,8 +9,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "nanumsquare", sans-serif;
   color: #272829;
 }
 
@@ -24,12 +27,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -348,11 +346,11 @@ h6 {
   position: relative;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
   }
-}
+} */
 
 #hero:before {
   content: "";
