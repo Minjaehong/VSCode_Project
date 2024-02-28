@@ -15,6 +15,8 @@
 body {
   font-family: "nanumsquare", sans-serif;
   color: #272829;
+  letter-spacing: -1px;
+  word-break: keep-all;
 }
 
 a {
@@ -486,12 +488,13 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #728394;
+  color: #0563bb;
 }
 
 .about .content ul {
   list-style: none;
   padding: 0;
+  
 }
 
 .about .content ul li {
@@ -698,6 +701,7 @@ section {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
+  display: block;
   z-index: 1;
   background: rgba(69, 80, 91, 0.8);
 }
@@ -836,16 +840,18 @@ section {
   display: block !important;
   /* background: #0563bb; */
   border: 0;
-  padding: 5px 30px;
+  padding: 5px 15px;
   color: #fff;
   transition: 0.4s;
   font-size: 20px;
+  text-align: center;
   /* border-radius: 50px; */
   position: absolute;
   /* left:calc(50% - 40px); */
-  right:0px;
+  right:15px;
   top: 15px;
 }
+
 
 /*--------------------------------------------------------------
 # Portfolio Details
